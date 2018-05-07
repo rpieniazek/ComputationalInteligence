@@ -8,14 +8,14 @@ fnNames = c("AluffiPentini", "Bohachevsky1", "Branin")
 path = '/Users/evelan/Desktop/'
 
 #true = wykonuje się tylko raz dla domyslnych parametrów dla 3 funkcji powyżej
-isDebug <- 1 #0 - false, 1 - true
+isDebug <- 0 #0 - false, 1 - true
 
 populationSizes = seq(50, 250, by = 50)
 iterSizes = seq(50, 300, by = 50)
 crossoverSizes = seq(0, 1.0, by = 0.2)
 mutationSizes = seq(0, 1.0, by = 0.2)
 elitePopulationSizes = seq(0, 1.0, by = 0.25)
-testInstances = seq(1:40)
+testInstances = 40
 
 defaultPopSize = 50
 defaultCrossover = 0.8
@@ -29,7 +29,7 @@ if (isDebug) {
   mutationSizes = c(defaultMutation)
   elitePopulationSizes = c(defaultElitePopulation)
   iterSizes = c(defaultIterationSize)
-  testInstances = seq(1:1)
+  testInstances = 1
 }
 
 #PLOT DRAWING --- 3d plot użytej funkcji
@@ -68,7 +68,25 @@ showFunctionContourWithResult <- function(x1, x2, f, GA) {
                  })
 }
 
-
+#PLOT DRAWING --- nie dziala
+showSummaryPlot <- function(GASummary) {
+  matplot(
+    rownames(GASummary),
+    GASummary,
+    type = 'l',
+    xlab = 'generations',
+    ylab = 'fitnes',
+    col = 1:6
+  )
+  legend(
+    'bottomright',
+    inset = .05,
+    legend = colnames(GASummary),
+    pch = 1,
+    horiz = TRUE,
+    col = 1:6
+  )
+}
 
 
 #GA CALCULATIONS --- liczy GA i zapisuje/wyswietla wykresy
@@ -100,9 +118,10 @@ calculateGA <-
     #oblicza liczbę elitarnetj populacji
     elitsim = round(popSize * elitsimPercentage)
     
-    #tmpGASummary = matrix(0, 50, 6)
+    #6 wartosci (kolumn) x liczba iteracji (wiersze) 
+    tmpGASummary = matrix(0, iterationSize, 6)
     #ilosc uruchomień testu
-    for (test in testInstances) {
+    for (test in 1:testInstances) {
       #minimizacja GA:
       GA <- ga(
         type = "real-valued",
@@ -118,9 +137,11 @@ calculateGA <-
         pmutation = pmutation,
         run = 100
       )
-      #tmpGASummary <- GA@summary + tmpGASummary
+      tmpGASummary <- GA@summary + tmpGASummary
     }
-    
+    #obliczenie sredniej dla 6 wartosci wyjsciowych z GA
+    tmpGASummary <- tmpGASummary / testInstances
+    #showSummaryPlot(tmpGASummary) - nie dziala
     
     #nazwa pliku z uzytymi parametrami
     name <- sprintf(
