@@ -5,17 +5,17 @@ library(GA)
 library(globalOptTests)
 
 fnNames = c("AluffiPentini", "Bohachevsky1", "Branin")
-path = '/Users/evelan/Desktop/'
+path = '/Users/evelan/Desktop/ga.nosync/'
 
 #true = wykonuje się tylko raz dla domyslnych parametrów dla 3 funkcji powyżej
 isDebug <- 0 #0 - false, 1 - true
 
 populationSizes = seq(50, 250, by = 50)
-iterSizes = seq(50, 300, by = 50)
-crossoverSizes = seq(0, 1.0, by = 0.2)
-mutationSizes = seq(0, 1.0, by = 0.2)
+iterSizes = seq(50, 250, by = 50)
+crossoverSizes = seq(0, 1.0, by = 0.25)
+mutationSizes = seq(0, 1.0, by = 0.25)
 elitePopulationSizes = seq(0, 1.0, by = 0.25)
-testInstances = 40
+testInstances = 1
 
 defaultPopSize = 50
 defaultCrossover = 0.8
@@ -68,7 +68,7 @@ showFunctionContourWithResult <- function(x1, x2, f, GA) {
                  })
 }
 
-#PLOT DRAWING --- nie dziala
+#PLOT DRAWING -- dziala issue #35 DONE UND MERGED
 showSummaryPlot <- function(GASummary) {
   matplot(
     rownames(GASummary),
@@ -88,6 +88,20 @@ showSummaryPlot <- function(GASummary) {
   )
 }
 
+getPlotName <- function( ... ) {
+  sprintf("\\clearpage\\begin{figure}[!htbp]
+    \\centering
+\\mbox{
+\\subfigure{
+\\includegraphics[width=3in]{{{inc/results/%s}}}\\quad
+}
+\\subfigure{
+\\includegraphics[width=3in]{{{inc/results/%s}}}\\quad
+}
+}
+                 \\caption{%s %s p%s i%s c%s m%s e%s}
+                 \\end{figure}", ... )
+}
 
 #GA CALCULATIONS --- liczy GA i zapisuje/wyswietla wykresy
 calculateGA <-
@@ -107,26 +121,25 @@ calculateGA <-
     x1 <- x2 <- seq(-5.12, 5.12, by = 0.1)
     f <- outer(x1, x2, Vectorize(testFunctionWrapper))
     
-    jpeg(file = sprintf("%s%s-3dplot.jpg", path, functionName))
-    showFunction3dPlot(x1, x2, f)
-    dev.off()
+    #jpeg(file = sprintf("%s%s-3dplot.jpg", path, functionName))
+    #showFunction3dPlot(x1, x2, f)
+    #dev.off()
     
-    jpeg(file = sprintf("%s%s-contour.jpg", path, functionName))
-    showFunctionContour(x1, x2, f)
-    dev.off()
+    #jpeg(file = sprintf("%s%s-contour.jpg", path, functionName))
+    #showFunctionContour(x1, x2, f)
+    #dev.off()
     
     #oblicza liczbę elitarnetj populacji
     elitsim = round(popSize * elitsimPercentage)
     
     #6 wartosci (kolumn) x liczba iteracji (wiersze) 
-    tmpGASummary = matrix(0, iterationSize, 6)
+    #tmpGASummary = matrix(0, iterationSize, 6)
     #ilosc uruchomień testu
     for (test in 1:testInstances) {
       #minimizacja GA:
       GA <- ga(
         type = "real-valued",
-        fitness =  function(x)
-          - Vectorize(testFunctionWrapper(x[1], x[2])),
+        fitness =  function(x) - Vectorize(testFunctionWrapper(x[1], x[2])),
         # uwaga na minusa, bo szukamy glob. minimum
         min = c(-5.12,-5.12),
         max = c(5.12, 5.12),
@@ -135,12 +148,14 @@ calculateGA <-
         elitism = elitsim,
         pcrossover = pcrossover,
         pmutation = pmutation,
-        run = 100
+        run = 100,
+        monitor = FALSE
       )
-      tmpGASummary <- GA@summary + tmpGASummary
+      #tmpGASummary <- GA@summary + tmpGASummary
     }
+    
     #obliczenie sredniej dla 6 wartosci wyjsciowych z GA
-    tmpGASummary <- tmpGASummary / testInstances
+    #tmpGASummary <- tmpGASummary / testInstances
     #showSummaryPlot(tmpGASummary) - nie dziala
     
     #nazwa pliku z uzytymi parametrami
@@ -154,13 +169,27 @@ calculateGA <-
       elitsimPercentage
     )
     
-    jpeg(file = sprintf("%sgenerations-%s.jpg", path, name))
+    filenamePlot = sprintf("generations-%s.jpg", name)
+    jpeg(file = sprintf("%s%s", path,filenamePlot))
     plot(GA) #wykres wg generacji
     dev.off()
     
-    jpeg(file = sprintf("%sresult-%s.jpg", path, name))
+    fileNameContour = sprintf("result-%s.jpg", name)
+    jpeg(file = sprintf("%s%s", path,fileNameContour))
     showFunctionContourWithResult(x1, x2, f, GA)
     dev.off()
+    
+    plotTitle <- "Test optymalizacji GA"
+    line = getPlotName(filenamePlot,
+                       fileNameContour,
+                       plotTitle,
+                functionName,
+                popSize,
+                iterationSize,
+                pcrossover,
+                pmutation,
+                elitsimPercentage)
+    write(line, file=sprintf("%s_latex.txt", path), append=TRUE)
   }
 
 #INVOKING GA WITH DIFFERENT PARAMERERS 
