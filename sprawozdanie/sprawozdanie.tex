@@ -69,19 +69,19 @@ W laboratorium zastosowano algorytmy genetyczne będące klasa algorytmów ewolu
 Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzystuje i symuluje ewolucję biologiczną. Wszystkie algorytmy tej klasy symulują podstawowe zachowania w teorii ewolucji biologicznej - procesy selekcji, mutacji i reprodukcji. Zachowanie jednostek zależy od środowiska. Zbiór jednostek nazywa się populacją. Taka populacja ewoluuje zgodnie z regułami selekcji zgodnie z funkcją celu przypisaną do środowiska. Propagowane do kolejnych pokoleń są tylko najbardziej dopasowane osobniki.
 
 \newpage
-\section{Funkcja Aluffi - Pentini}
+\section{Funkcja Shuberta}
 	\subsection{Wzór analityczny}
 	   \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{inc/wzory/aluffi-pentini}
-     \caption{Wzór analityczny funkcji Aluffi - Pentini}
+    \includegraphics[width=0.7\textwidth]{inc/wzory/schubert}
+     \caption{Wzór analityczny funkcji Schuberta}
     \end{figure}
     
     
     \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{inc/wzory/aluffini-pentini-global-minimum}
-     \caption{Minimum globalne dla funkcji Aluffi - Pentini}
+    \includegraphics[width=0.3\textwidth]{inc/wzory/schubert-global-minimum}
+     \caption{Minimum globalne dla funkcji Schuberta}
     \end{figure}
     
     
@@ -89,334 +89,349 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
     
     \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/aluffi-pentini}
-     \caption{Wykres  funkcji Aluffi - Pentini}
+    \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/schubert}
+     \caption{Wykres  funkcji Schuberta}
     \end{figure}
     
     
     \subsection{Optymalizacja poszukiwania ekstremum globalnego}
 
 \subsubsection{Modyfikacja parametru elitarności}
+
+W przypadku zwiększania wartości elitarności populacji średnie wartości odchyleń zmniejszają się. W przypadku większej elitarności algorytm szybciej znajduje optymalne rozwiązanie. Jeżeli elitarność populacji jest równa 1, to algorytm stochastycznie wylosował jeden zestaw rozwiązań, który z powodu braku ewolucji nie zbliżył się do rozwiązania optymalnego.
+
+
 \begin{figure}[!htbp]s
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e0.00}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e0.00}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e0.00}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e0.00}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e0}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e0.25}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e0.25}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e0.25}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e0.25}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e0.25}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.25}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e0.50}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e0.50}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e0.50}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e0.50}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e0.5}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.5}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e0.75}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e0.75}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e0.75}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e0.75}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e0.75}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.75}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e1.00}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e1.00}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e1.00}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e1.00}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e1}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e1}
                  \end{figure}
 \begin{figure}[!htbp]
-
-
 \clearpage
+
+
 \subsubsection{Modyfikacja parametru mutacji}
+
+W przypadku zwiększania wartości mutacji zarówno średnia jak i mediana zmniejszają się się. Algorytm zawsze znajduje po podobnej liczbie populacji rozwiązanie optymalne.
+
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.00-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.00-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.00-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.00-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.25-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.25-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.25-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.25-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.25 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.25 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.50-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.50-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.50-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.50-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.5 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.5 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.75-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.75-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.75-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.75-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.75 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.75 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m1.00-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m1.00-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m1.00-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m1.00-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m1 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m1 e0.05}
                  \end{figure}
+
+
                  
 \clearpage
 \subsubsection{Modyfikacja parametru krzyżowania}
 
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.00-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.00-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.25-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.25-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.25 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.50-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.50-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.5 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.75-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.75-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.75 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c1.00-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c1.00-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c1 m0.1 e0.05}
-                 \end{figure}
-                 
-  \clearpage
-\subsubsection{Modyfikacja parametru liczby iteracji}                    
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i050-c0.80-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i050-c0.80-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i50 c0.8 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i150-c0.80-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i150-c0.80-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i150 c0.8 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i200-c0.80-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i200-c0.80-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i200 c0.8 m0.1 e0.05}
-                 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-\mbox{
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i250-c0.80-m0.10-e0.05}}}\quad
-}
-\subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i250-c0.80-m0.10-e0.05}}}\quad
-}
-}
-                 \caption{Test optymalizacji GA AluffiPentini p50 i250 c0.8 m0.1 e0.05}
-                 \end{figure}
-                 
-\clearpage
-\subsubsection{Modyfikacja parametru rozmiaru populacji}              
+W przypadku zwiększania parametru krzyżowania algorytm szybciej znajduje lokalne minimum, ale nie zawsze jest to ekstremum globalne. Wartości średniej i mediany pozostają na podobnym poziomie  niezależnie od parametrów.
+
 
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p050-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.00-m0.10-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p050-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.00-m0.10-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0 m0.1 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p100-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.25-m0.10-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p100-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.25-m0.10-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p100 i100 c0.8 m0.1 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.25 m0.1 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p150-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.50-m0.10-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p150-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.50-m0.10-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p150 i100 c0.8 m0.1 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.5 m0.1 e0.05}
                  \end{figure}
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p200-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.75-m0.10-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p200-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.75-m0.10-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p200 i100 c0.8 m0.1 e0.05}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.75 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c1.00-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c1.00-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c1 m0.1 e0.05}
+                 \end{figure}
+   
+  \clearpage
+\subsubsection{Modyfikacja parametru liczby iteracji}        
+W przypadku zwiększania ilości iteracji zarówno średnia jak i mediana pozostają na podobnym poziomie. Zmiana parametru liczby iteracji nie wpływa również znacząco na wyniki.                  
+             
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i050-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i050-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i50 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i150-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i150-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i150 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i200-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i200-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i200 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i250-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i250-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i250 c0.8 m0.1 e0.05}
+                 \end{figure}
+                 
+ \clearpage
+\subsubsection{Modyfikacja parametru rozmiaru populacji}              
+
+                 
+Gdy parametr rozmiaru populacji jest ustawiony na wartość populacji 250 można zaobserwować mała anomalię średniej i mediany w okolicach 50-60 pokolenia. Anomalie średniej i mediany są skorelowane ze sobą, jednak nie wpływają na znalezione rozwiązanie. Niezależnie od rozmiaru parametru algorytm znajduje minimum globalne przy podobnej ilości pokoleń.                 
+                 
+                 
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p100-i100-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p100-i100-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p100 i100 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p150-i100-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p150-i100-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p150 i100 c0.8 m0.1 e0.05}
+                 \end{figure}
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p200-i100-c0.80-m0.10-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p200-i100-c0.80-m0.10-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p200 i100 c0.8 m0.1 e0.05}
                  \end{figure}
                      \clearpage
 \begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/generations-AluffiPentini-p250-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p250-i100-c0.80-m0.10-e0.05}}}\quad
 }
 \subfigure{
-\includegraphics[width=3in]{{{inc/results/result-AluffiPentini-p250-i100-c0.80-m0.10-e0.05}}}\quad
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p250-i100-c0.80-m0.10-e0.05}}}\quad
 }
 }
-                 \caption{Test optymalizacji GA AluffiPentini p250 i100 c0.8 m0.1 e0.05}
+                 \caption{Test optymalizacji GA Schubert p250 i100 c0.8 m0.1 e0.05}
                  \end{figure}
-                 
-                 
-                 
-                 
+
                  
                  
 \newpage
@@ -443,6 +458,8 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
     
     \subsection{Optymalizacja}
 \subsubsection{Modyfikacja parametru elitarności}    
+W przypadku zwiększania wartości elitarności populacji średnia i mediana pozostają na podobnym poziomie. W przypadku większej elitarności algorytm szybciej znajduje optymalne rozwiązanie. Jeżeli elitarność populacji jest równa 1, to algorytm stochastycznie wylosował jeden zestaw rozwiązań, który z powodu braku ewolucji nie zbliżył się do rozwiązania optymalnego.
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -503,9 +520,15 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e1}
                  \end{figure}
-                 
+
+
 \clearpage
 \subsubsection{Modyfikacja parametru mutacji}
+
+ Zwiększanie parametru mutacji sprawia, że zarówno średnia jak i mediana zwiększają się wraz ze wzrostem parametru mutacji. Niezależnie od tego algorytm znajduje optymalne rozwiązanie stosunkowo szybko i po podobnej ilości pokoleń.
+ 
+ 
+ 
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -567,8 +590,12 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m1 e0.05}
                  \end{figure}
                  
+
 \clearpage
-\subsubsection{Modyfikacja parametru krzyżowania}                
+\subsubsection{Modyfikacja parametru krzyżowania}
+
+ Modyfikacja parametru krzyżowania nie wpływa na rozwiązanie, ani na wartości średniej i mediany.        
+                
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -629,9 +656,13 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c1 m0.1 e0.05}
                  \end{figure}
-                 
+ 
+        
  \clearpage
 \subsubsection{Modyfikacja parametru liczby iteracji}              
+
+Modyfikacja parametru rozmiaru populacji nie wpływa na rozwiązanie, ani na wartości średniej i mediany.                  
+
 
 \begin{figure}[!htbp]
     \centering
@@ -693,10 +724,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i250 c0.8 m0.1 e0.05}
                  \end{figure}
-                 
-\clearpage
+ \clearpage            
+  
 \subsubsection{Modyfikacja parametru rozmiaru populacji}              
-
+ Modyfikacja parametru rozmiaru krzyżowania  nie wpływa na rozwiązanie, ani na wartości średniej i mediany.   
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -792,6 +823,9 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 \subsection{Optymalizacja}            
 
 \subsubsection{Modyfikacja parametru elitarności}    
+
+W przypadku braku populacji elitarnej algorytm potrzebował więcej czasu aby odnaleźć poprawny wynik, wskazuje na to wykres mediany. W przypadku wartości 0.25, 0.5 oraz 0.75 algorytm szybciej odnajdywał poprawne rozwiązanie. W momencie gdy cała populacjie była oznaczana jako elitarna algorytm nie znajdował poprawnego rozwiązania, nie występowała również zmiana między kolejnymi generacjami. 
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -855,6 +889,8 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                
   \clearpage
  \subsubsection{Modyfikacja parametru mutacji}
+ Algorytm bez względu na zmianę parametru mutacji zwsze odnajdował poprawne rozwiązanie, im większa wartość parametru tym wykres mediany oraz średniej wskazywał na coraz większe odchylenia i niżysze wyniki.
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -918,7 +954,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                  
  \clearpage
 \subsubsection{Modyfikacja parametru krzyżowania}             
-
+W przypadku braku krzyżowania funkcja potrzebuje większej ilości iteracji aby znaleźć poprawne rozwiązanie. Wyższy wskaźnik ma w tym przypadku pozytywny wpływ na szybkość odnajdywanego rozwiązania.
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -983,6 +1019,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                  
 \clearpage
 \subsubsection{Modyfikacja parametru liczby iteracji}              
+Zmiana liczby iteracji w przypadku funkcji Branin nie wpływa na jakość rozwiązania. Nie występują żadne anomalie między zmianami parametru. Funkcja w każdym przypadku zachowuję się identycznie. 
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -1046,7 +1083,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                  
 \clearpage
 \subsubsection{Modyfikacja parametru rozmiaru populacji}              
-
+Funkcja Branin nie posiada wielu lokalnych minimów tak jak w jest to w przypadku funkcji Schubert. Dlatego algorytm znajduje optymalne rozwiązanie zawsze i wskazania mediany oraz średniej nie wykazują aby algorytm próbował znaleźć globalnego minimum w miejscu gdzie występuje lokalne minimum. 
 
 \begin{figure}[!htbp]
     \centering

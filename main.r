@@ -4,10 +4,10 @@
 library(GA)
 library(globalOptTests)
 
-fnNames = c("AluffiPentini", "Bohachevsky1", "Branin")
-path = '/Users/evelan/Desktop/ga.nosync/'
+fnNames = c("Schubert", "Bohachevsky1", "Branin")
+path = '~/Desktop/intObl/'
 
-#true = wykonuje się tylko raz dla domyslnych parametrów dla 3 funkcji powyżej
+#true = wykonuje si?? tylko raz dla domyslnych parametr??w dla 3 funkcji powy??ej
 isDebug <- 0 #0 - false, 1 - true
 
 populationSizes = seq(50, 250, by = 50)
@@ -32,7 +32,7 @@ if (isDebug) {
   testInstances = 1
 }
 
-#PLOT DRAWING --- 3d plot użytej funkcji
+#PLOT DRAWING --- 3d plot u??ytej funkcji
 showFunction3dPlot <- function(x1, x2, f) {
   persp3D(x1,
           x2,
@@ -42,7 +42,7 @@ showFunction3dPlot <- function(x1, x2, f) {
           color.palette = bl2gr.colors)
 }
 
-#PLOT DRAWING --- kontur z użytej funkcji
+#PLOT DRAWING --- kontur z u??ytej funkcji
 showFunctionContour <- function(x1, x2, f) {
   filled.contour(x1, x2, f, color.palette = bl2gr.colors)
 }
@@ -117,24 +117,24 @@ calculateGA <-
       goTest(par = c(x1, x2) , fnName = functionName)
     }
     
-    #rozpatrywana przestrzeń
+    #rozpatrywana przestrze??
     x1 <- x2 <- seq(-5.12, 5.12, by = 0.1)
     f <- outer(x1, x2, Vectorize(testFunctionWrapper))
     
-    #jpeg(file = sprintf("%s%s-3dplot.jpg", path, functionName))
-    #showFunction3dPlot(x1, x2, f)
-    #dev.off()
+    jpeg(file = sprintf("%s%s-3dplot.jpg", path, functionName))
+    showFunction3dPlot(x1, x2, f)
+    dev.off()
     
-    #jpeg(file = sprintf("%s%s-contour.jpg", path, functionName))
-    #showFunctionContour(x1, x2, f)
-    #dev.off()
+    jpeg(file = sprintf("%s%s-contour.jpg", path, functionName))
+    showFunctionContour(x1, x2, f)
+    dev.off()
     
-    #oblicza liczbę elitarnetj populacji
+    #oblicza liczb?? elitarnetj populacji
     elitsim = round(popSize * elitsimPercentage)
     
     #6 wartosci (kolumn) x liczba iteracji (wiersze) 
     #tmpGASummary = matrix(0, iterationSize, 6)
-    #ilosc uruchomień testu
+    #ilosc uruchomie?? testu
     for (test in 1:testInstances) {
       #minimizacja GA:
       GA <- ga(
