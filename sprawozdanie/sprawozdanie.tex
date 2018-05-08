@@ -55,7 +55,8 @@
 		\vfill
 		
 	\end{titlepage}
-
+\tableofcontents
+\newpage
 \listoffigures
 \newpage
 \section{Wstęp}
@@ -67,6 +68,7 @@
 W laboratorium zastosowano algorytmy genetyczne będące klasa algorytmów ewolucyjnych.
 Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzystuje i symuluje ewolucję biologiczną. Wszystkie algorytmy tej klasy symulują podstawowe zachowania w teorii ewolucji biologicznej - procesy selekcji, mutacji i reprodukcji. Zachowanie jednostek zależy od środowiska. Zbiór jednostek nazywa się populacją. Taka populacja ewoluuje zgodnie z regułami selekcji zgodnie z funkcją celu przypisaną do środowiska. Propagowane do kolejnych pokoleń są tylko najbardziej dopasowane osobniki.
 
+\newpage
 \section{Funkcja Aluffi - Pentini}
 	\subsection{Wzór analityczny}
 	   \begin{figure}[!htbp]
@@ -86,7 +88,8 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
     
     \subsection{Optymalizacja poszukiwania ekstremum globalnego}
 
-\begin{figure}[!htbp]
+\subsubsection{Modyfikacja parametru elitarności}
+\begin{figure}[!htbp]s
     \centering
 \mbox{
 \subfigure{
@@ -147,6 +150,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                  \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m0.1 e1}
                  \end{figure}
 \begin{figure}[!htbp]
+
+
+\clearpage
+\subsubsection{Modyfikacja parametru mutacji}
     \centering
 \mbox{
 \subfigure{
@@ -206,6 +213,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA AluffiPentini p50 i100 c0.8 m1 e0.05}
                  \end{figure}
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru krzyżowania}
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -266,6 +277,9 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA AluffiPentini p50 i100 c1 m0.1 e0.05}
                  \end{figure}
+                 
+  \clearpage
+\subsubsection{Modyfikacja parametru liczby iteracji}                    
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -326,6 +340,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA AluffiPentini p50 i250 c0.8 m0.1 e0.05}
                  \end{figure}
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru rozmiaru populacji}              
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -410,7 +428,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
     \end{figure}
     
     \subsection{Optymalizacja}
-
+\subsubsection{Modyfikacja parametru elitarności}    
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -471,6 +489,9 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e1}
                  \end{figure}
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru mutacji}
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -531,6 +552,9 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m1 e0.05}
                  \end{figure}
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru krzyżowania}                
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -591,6 +615,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c1 m0.1 e0.05}
                  \end{figure}
+                 
+ \clearpage
+\subsubsection{Modyfikacja parametru liczby iteracji}              
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -651,6 +679,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i250 c0.8 m0.1 e0.05}
                  \end{figure}
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru rozmiaru populacji}              
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -664,7 +696,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
                  \caption{Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0.05}
                  \end{figure}
                  
-                                  \clearpage
+                              
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -701,7 +733,6 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Bohachevsky1 p200 i100 c0.8 m0.1 e0.05}
                  \end{figure}
-                 \clearpage
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -720,7 +751,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
           
           
                  
-                 
+ \clearpage                
 \newpage
 \section{Funkcja Branina}
 \subsection{Wzór analityczny}
@@ -739,7 +770,8 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 
        
 \subsection{Optymalizacja}            
-                 
+
+\subsubsection{Modyfikacja parametru elitarności}    
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -800,6 +832,9 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e1}
                  \end{figure}
+               
+  \clearpage
+ \subsubsection{Modyfikacja parametru mutacji}
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -860,6 +895,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Branin p50 i100 c0.8 m1 e0.05}
                  \end{figure}
+                 
+ \clearpage
+\subsubsection{Modyfikacja parametru krzyżowania}             
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -920,6 +959,10 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Branin p50 i100 c1 m0.1 e0.05}
                  \end{figure}
+                 
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru liczby iteracji}              
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -980,6 +1023,11 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 }
                  \caption{Test optymalizacji GA Branin p50 i250 c0.8 m0.1 e0.05}
                  \end{figure}
+                 
+\clearpage
+\subsubsection{Modyfikacja parametru rozmiaru populacji}              
+
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
