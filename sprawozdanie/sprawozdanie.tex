@@ -594,7 +594,7 @@ W przypadku zwiększania wartości elitarności populacji średnia i mediana poz
 \clearpage
 \subsubsection{Modyfikacja parametru krzyżowania}
 
- Modyfikacja parametru krzyżowania nie wpływa na rozwiązanie, ani na wartości średniej i mediany.        
+ Modyfikacja parametru krzyżowania nie wpływa na rozwiązanie, ani na wartości średniej i mediany. W odróżnieniu od funkcji Schuberta, funkcja Bohachevsky'ego  nie posiada wielu minimum lokalnych, a tylko jedno ekstremum, które okazuje się globalne.
                 
 \begin{figure}[!htbp]
     \centering
@@ -661,8 +661,8 @@ W przypadku zwiększania wartości elitarności populacji średnia i mediana poz
  \clearpage
 \subsubsection{Modyfikacja parametru liczby iteracji}              
 
-Modyfikacja parametru rozmiaru populacji nie wpływa na rozwiązanie, ani na wartości średniej i mediany.                  
-
+Modyfikacja parametru liczby iteracji nie wpływa na rozwiązanie, ani na wartości średniej i mediany.                  
+Sytuacja jest analogiczna do przypadku modyfikacji parametru krzyżowania.
 
 \begin{figure}[!htbp]
     \centering
@@ -727,7 +727,7 @@ Modyfikacja parametru rozmiaru populacji nie wpływa na rozwiązanie, ani na war
  \clearpage            
   
 \subsubsection{Modyfikacja parametru rozmiaru populacji}              
- Modyfikacja parametru rozmiaru krzyżowania  nie wpływa na rozwiązanie, ani na wartości średniej i mediany.   
+ Modyfikacja parametru rozmiaru populacji  nie wpływa na rozwiązanie, ani na wartości średniej i mediany. Sytuacja jest analogiczna do przypadku modyfikacji parametru krzyżowania.   
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -824,7 +824,7 @@ Modyfikacja parametru rozmiaru populacji nie wpływa na rozwiązanie, ani na war
 
 \subsubsection{Modyfikacja parametru elitarności}    
 
-W przypadku braku populacji elitarnej algorytm potrzebował więcej czasu aby odnaleźć poprawny wynik, wskazuje na to wykres mediany. W przypadku wartości 0.25, 0.5 oraz 0.75 algorytm szybciej odnajdywał poprawne rozwiązanie. W momencie gdy cała populacjie była oznaczana jako elitarna algorytm nie znajdował poprawnego rozwiązania, nie występowała również zmiana między kolejnymi generacjami. 
+W przypadku braku populacji elitarnej algorytm potrzebował więcej czasu aby odnaleźć poprawny wynik, wskazuje na to wykres mediany. W przypadku wartości 0.25, 0.5 oraz 0.75 algorytm szybciej odnajdywał poprawne rozwiązanie. W momencie gdy cała populacje była oznaczana jako elitarna algorytm nie znajdował poprawnego rozwiązania, nie występowała również zmiana między kolejnymi generacjami. 
 
 \begin{figure}[!htbp]
     \centering
@@ -889,7 +889,7 @@ W przypadku braku populacji elitarnej algorytm potrzebował więcej czasu aby od
                
   \clearpage
  \subsubsection{Modyfikacja parametru mutacji}
- Algorytm bez względu na zmianę parametru mutacji zwsze odnajdował poprawne rozwiązanie, im większa wartość parametru tym wykres mediany oraz średniej wskazywał na coraz większe odchylenia i niżysze wyniki.
+ Algorytm bez względu na zmianę parametru mutacji zawsze odnajdował poprawne rozwiązanie, im większa wartość parametru tym wykres mediany oraz średniej wskazywał na coraz większe odchylenia i niższe wyniki.
 
 \begin{figure}[!htbp]
     \centering
