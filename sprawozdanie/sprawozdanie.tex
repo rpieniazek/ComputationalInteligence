@@ -9,6 +9,8 @@
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{listings}
+ \usepackage[table,xcdraw]{xcolor}
+
 \geometry{
 	a4paper,
 	total={170mm,257mm},
@@ -68,31 +70,90 @@
 W laboratorium zastosowano algorytmy genetyczne będące klasa algorytmów ewolucyjnych.
 Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzystuje i symuluje ewolucję biologiczną. Wszystkie algorytmy tej klasy symulują podstawowe zachowania w teorii ewolucji biologicznej - procesy selekcji, mutacji i reprodukcji. Zachowanie jednostek zależy od środowiska. Zbiór jednostek nazywa się populacją. Taka populacja ewoluuje zgodnie z regułami selekcji zgodnie z funkcją celu przypisaną do środowiska. Propagowane do kolejnych pokoleń są tylko najbardziej dopasowane osobniki.
 
-\newpage
+
+\subsection{Modyfikowane parametry}
+
+W celu badania wpływu zmiennych na zachowanie algorytmu genetycznego modyfikowano następująca parametry:
+
+\begin{itemize}
+\item \textbf{elitarność} - Procentowa wartość populacji, która zostaje przeniesiona do następnego pokolenia bez zmian. Niezerowa wartość gwarantuje, że jakość rozwiązania nie zmniejszy się z pokolenia na pokolenie.
+
+\item \textbf{mutacja} - Przypadkowa zmiana genomu w algorytmie genetycznym, analogicznie do mutacji biologicznej.
+
+\item \textbf{krzyżowanie} -  Połączenie niektórych (wybranych losowo) genotypów w jeden. Kojarzenie ma sprawić, że potomek dwóch osobników rodzicielskich ma zespół cech, który jest kombinacją ich cech (może się zdarzyć, że tych najlepszych).
+
+\item \textbf{liczba iteracji} - Ilość pokoleń  
+\item \textbf{rozmiar populacji} - Ilość osobników w jednym pokoleniu.
+\end{itemize}
+
+
+\begin{table}[!htbp]
+\centering
+\caption{Wartości modyfikowanych parametrów}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Parametr}      & \textbf{Wartości}      \\ \hline
+populacja              & 50, 100, 150, 200, 250 \\ \hline
+liczba iteracji        & 50, 100, 150, 200, 250 \\ \hline
+p. krzyżowania         & 0, 0.25, 0.5, 0.75, 1  \\ \hline
+p. mutacji             & 0, 0.25, 0.5, 0.75, 1  \\ \hline
+p. populacji elitarnej & 0, 0.25, 0.5, 0.75, 1  \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Zastosowane narzędzia implementacji}
+
+\subsubsection{Język R}
+R jest językiem programowania i środowiskiem programistycznym, używanym głównie do obliczeń statystycznych i wizualizacji danych, do sztucznej inteligencji a także do ekonomii i innych zagadnień wykorzystujących obliczenia numeryczne. Został stworzony przez Rossa Ihakę i Roberta Gentlemana na Uniwersytecie w Auckland w Nowej Zelandii. 
+
+
+\subsubsection{Pakiet GA}
+
+Pakiet GA zawiera zestaw funkcji ogólnego przeznaczenia do optymalizacji z wykorzystaniem algorytmów genetycznych. Dostępnych jest kilka operatorów genetycznych, których można łączyć w celu zbadania najlepszych ustawień dla bieżącego zadania.
+
+
+\subsubsection{Pakiet globalOpts}
+Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testów wydajnościowych algorytmów optymalizacji globalnej.
+
+\subsection{Kod źródłowy}
+
+\clearpage
 \section{Funkcja Shuberta}
 	\subsection{Wzór analityczny}
 	   \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{inc/wzory/schubert}
+    \includegraphics[width=0.6\textwidth]{inc/wzory/schubert}
      \caption{Wzór analityczny funkcji Schuberta}
     \end{figure}
     
     
-    \begin{figure}[!htbp]
+ 
+    
+    
+    \subsection{Wykres w ustalonym przedziale zmiennych}
+    
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{inc/wykresyfunkcji/schubert}
+     \caption{Wykres  funkcji Schuberta}
+    \end{figure}
+    
+    \subsection{Ekstremum globalne}
+    
+       \begin{figure}[!h]
     \centering
     \includegraphics[width=0.3\textwidth]{inc/wzory/schubert-global-minimum}
      \caption{Minimum globalne dla funkcji Schuberta}
     \end{figure}
     
-    
-    \subsection{Wykres w ustalonym przedziale zmiennych}
-    
-    \begin{figure}[!htbp]
+       \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/schubert}
-     \caption{Wykres  funkcji Schuberta}
+    \includegraphics[width=0.3\textwidth]{inc/wykresyfunkcji/schubert-global-minimum}
+     \caption{Minimum globalne dla funkcji Schuberta}
     \end{figure}
-    
     
     \subsection{Optymalizacja poszukiwania ekstremum globalnego}
 
@@ -101,7 +162,7 @@ Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzyst
 W przypadku zwiększania wartości elitarności populacji średnie wartości odchyleń zmniejszają się. W przypadku większej elitarności algorytm szybciej znajduje optymalne rozwiązanie. Jeżeli elitarność populacji jest równa 1, to algorytm stochastycznie wylosował jeden zestaw rozwiązań, który z powodu braku ewolucji nie zbliżył się do rozwiązania optymalnego.
 
 
-\begin{figure}[!htbp]s
+\begin{figure}[!htbp]
     \centering
 \mbox{
 \subfigure{
@@ -418,7 +479,7 @@ Gdy parametr rozmiaru populacji jest ustawiony na wartość populacji 250 można
 }
                  \caption{Test optymalizacji GA Schubert p200 i100 c0.8 m0.1 e0.05}
                  \end{figure}
-                     \clearpage
+
 \begin{figure}[!htbp]
     \centering
 \mbox{
@@ -433,8 +494,85 @@ Gdy parametr rozmiaru populacji jest ustawiony na wartość populacji 250 można
                  \end{figure}
 
                  
+ \clearpage   
+\subsection{Jednoczesna modyfikacja parametru krzyżowania i mutacji}     
+     
+ W przypadku jednoczesnej modyfikacji parametru krzyżowania i mutacji wyniki mają charakter losowy, lecz skupiają się wokół minimum lokalnych. Wraz ze wzrostem obydwu parametrów wartości średniej i mediany maleją.
+ 
+ 
+ 
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.00-m0.00-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.00-m0.00-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p050 i100 c0.0 m0.0 e0.05}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.25-m0.25-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.25-m0.25-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p050 i100 c0.25 m0.25 e0.05}
+\end{figure}
+
+               
+               
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.50-m0.50-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.50-m0.50-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p050 i100 c0.50 m0.50 e0.05}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c0.75-m0.75-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c0.75-m0.75-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p050 i100 c0.75 m0.75 e0.05}
+\end{figure}
+     
+ \begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Schubert-p050-i100-c1.00-m1.00-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Schubert-p050-i100-c1.00-m1.00-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Schubert p050 i100 c1.00 m1.00 e0.05}
+\end{figure}
+    
+     
                  
-\newpage
+\clearpage
 \section{Funkcja Bohachevsky'ego}
 \subsection{Wzór analityczny}
 \begin{figure}[!htbp]
@@ -443,18 +581,27 @@ Gdy parametr rozmiaru populacji jest ustawiony na wartość populacji 250 można
      \caption{Wzór analityczny funkcji Bochachevsky'ego}
     \end{figure}
     
-    \begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=0.7\textwidth]{inc/wzory/bohachevsky-global-minimum}
-     \caption{Minimum globalne funkcji Bochachevsky'ego}
-    \end{figure}
-    
     \subsection{Wykres funkcji}
     \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/bohachevsky}
      \caption{Wzór analityczny funkcji Bochachevsky'ego}
     \end{figure}
+    
+    \subsection{Ekstremum globalne}
+    
+     \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{inc/wzory/bohachevsky-global-minimum}
+     \caption{Minimum globalne funkcji Bochachevsky'ego}
+    \end{figure}
+    
+     \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/bohachevsky-global-minimum}
+     \caption{Minimum globalne funkcji Bochachevsky'ego}
+    \end{figure}
+    
     
     \subsection{Optymalizacja}
 \subsubsection{Modyfikacja parametru elitarności}    
@@ -791,7 +938,81 @@ Sytuacja jest analogiczna do przypadku modyfikacji parametru krzyżowania.
                  \caption{Test optymalizacji GA Bohachevsky1 p250 i100 c0.8 m0.1 e0.05}
                  \end{figure}
                  
-          
+  \clearpage   
+\subsection{Jednoczesna modyfikacja parametru krzyżowania i mutacji}     
+     
+     W przypadku jednoczesnej modyfikacji parametru krzyżowania i mutacji krzywe rozwiązania mają wartości podobne. Wraz ze wzrostem obydwu parametrów wartości średniej i mediany są gorsze. 
+ 
+ 
+ 
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Bohachevsky1-p050-i100-c0.00-m0.00-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Bohachevsky1-p050-i100-c0.00-m0.00-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Bohachevsky1 p050 i100 c0.0 m0.0 e0.05}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Bohachevsky1-p050-i100-c0.25-m0.25-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Bohachevsky1-p050-i100-c0.25-m0.25-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Bohachevsky1 p050 i100 c0.25 m0.25 e0.05}
+\end{figure}
+
+               
+               
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Bohachevsky1-p050-i100-c0.50-m0.50-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Bohachevsky1-p050-i100-c0.50-m0.50-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Bohachevsky1 p050 i100 c0.50 m0.50 e0.05}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Bohachevsky1-p050-i100-c0.75-m0.75-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Bohachevsky1-p050-i100-c0.75-m0.75-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Bohachevsky1 p050 i100 c0.75 m0.75 e0.05}
+\end{figure}
+     
+ \begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Bohachevsky1-p050-i100-c1.00-m1.00-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Bohachevsky1-p050-i100-c1.00-m1.00-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Bohachevsky1 p050 i100 c1.00 m1.00 e0.05}
+\end{figure}         
           
           
           
@@ -806,11 +1027,6 @@ Sytuacja jest analogiczna do przypadku modyfikacji parametru krzyżowania.
      \caption{Wzór analityczny funkcji Branina}
     \end{figure}                 
 
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=0.7\textwidth]{inc/wzory/branin-global-minimum}
-     \caption{Minimum globalne funkcji Branina}
-    \end{figure}             
     
 \subsection{Wykres w ustalonym przedziale zmiennych  }
        \begin{figure}[!htbp]
@@ -819,6 +1035,20 @@ Sytuacja jest analogiczna do przypadku modyfikacji parametru krzyżowania.
      \caption{Wzór analityczny funkcji Branina}
     \end{figure}                 
 
+\subsection{Ekstremum globalne}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{inc/wzory/branin-global-minimum}
+     \caption{Minimum globalne funkcji Branina}
+    \end{figure}             
+    
+ 
+ \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/branin-global-minimum}
+     \caption{Minimum globalne funkcji Branina}
+    \end{figure}             
+    
        
 \subsection{Optymalizacja}            
 
@@ -1146,9 +1376,103 @@ Funkcja Branin nie posiada wielu lokalnych minimów tak jak w jest to w przypadk
                  \caption{Test optymalizacji GA Branin p250 i100 c0.8 m0.1 e0.05}
                  \end{figure}
 
-    
+
+ \clearpage   
+\subsection{Jednoczesna modyfikacja parametru krzyżowania i mutacji}     
+     
+Wartości średniej i mediany są gorsze wraz ze wzrostem obydwu parametrów.
+W przypadku jednoczesnej modyfikacji parametru krzyżowania i mutacji krzywe rozwiązania mają wartości podobne. 
+ 
+     
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Branin-p050-i100-c0.00-m0.00-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Branin-p050-i100-c0.00-m0.00-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Branin p050 i100 c0.0 m0.0 e0.05}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Branin-p050-i100-c0.25-m0.25-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Branin-p050-i100-c0.25-m0.25-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Branin p050 i100 c0.25 m0.25 e0.05}
+\end{figure}
+
+               
+               
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Branin-p050-i100-c0.50-m0.50-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Branin-p050-i100-c0.50-m0.50-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Branin p050 i100 c0.50 m0.50 e0.05}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Branin-p050-i100-c0.75-m0.75-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Branin-p050-i100-c0.75-m0.75-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Branin p050 i100 c0.75 m0.75 e0.05}
+\end{figure}
+     
+ \begin{figure}[!htbp]
+    \centering
+\mbox{
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/generations-Branin-p050-i100-c1.00-m1.00-e0.05}}}\quad
+}
+\subfigure{
+\includegraphics[width=3in]{{{inc/results/result-Branin-p050-i100-c1.00-m1.00-e0.05}}}\quad
+}
+}
+                 \caption{Test optymalizacji GA Branin p050 i100 c1.00 m1.00 e0.05}
+\end{figure}    
 
 
 \section{Wnioski}
+
+Badanie wpływu paramterów na jakość rozwiązań optymalnych poszukiwanych przez algorytm genetyczny jest zadaniem nietrywialnym, ale możliwym do wykonania. Zastosowanie pakietu GA dla języka R pozwoliło skupić się bardziej na testowaniu parametrów, a nie na implementacji algorytmu.
+
+Warto zauważyć, że na jakość rozwiązań ma wpływ nie tylko wartość parametru, ale również funkcja poddawana testom. Dla tych samych zestawów danych wykresy testów różnią się pomiędzy testowanymi funkcjami. W przypadku poszukiwania ekstremum globalnego dla funkcji z wieloma ekstremami lokalnymi i  niekorzystnym doborze parametrów  algorytm  może nie znaleźć poprawnego rozwiązania. Jest to spowodowane stochastycznym doborem populacji początkowej.
+
+
+
+\section{Literatura}
+\begin{enumerate}
+\item Artur Suchwałko, "Wprowadzenie do R dla programistow innych jezykow", \url{https://cran.r-project.org/doc/contrib/R-dla-programistow-innych-jezykow.pdf}, 2014-02-23
+\item Luca Scrucca, "On some extensions to GA package:
+hybrid optimisation, parallelisation and islands evolution", \url{https://arxiv.org/pdf/1605.01931.pdf}, 2016-05-09
+\item dr inż. Julian Sienkiewicz, "Pakiet R w analizie układów złożonych", \url{http://www.if.pw.edu.pl/~julas/CSAR/csar11.html}, 2017
+\item W. N. Venables, D. M. Smith, R Core Team, "An Introduction to R", \url{https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf}, 2018-04-23
+\item Luca Scrucca, "Package 'GA'", \url{ftp://cran.r-project.org/pub/R/web/packages/GA/GA.pdf}, 2016-09-29
+\item Katharine Mullen, "Package 'globalOptTests'", \url{https://cran.r-project.org/web/packages/globalOptTests/globalOptTests.pdf},
+2015-02-15
+\item Abdal-Rahman Hedar, "Global Optimization Test Problems", \url{http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm}, dostęp online: 2018-05-04
+\end{enumerate}
 
 \end{document}\documentclass{article}
