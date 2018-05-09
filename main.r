@@ -4,35 +4,30 @@
 library(GA)
 library(globalOptTests)
 
+#miejsce zapisu wykresow
+path = '/Users/evelan/Desktop/ga.nosync/'
+
+#uzyte funkcji
 fnNames = c("Schubert", "Bohachevsky1", "Branin")
-path = '~/Desktop/intObl/'
 
-#true = wykonuje si?? tylko raz dla domyslnych parametr??w dla 3 funkcji powy??ej
-isDebug <- 0 #0 - false, 1 - true
+# liczba przebiegow
+testInstances = 50
 
+#testowane wartosci parametrow
 populationSizes = seq(50, 250, by = 50)
 iterSizes = seq(50, 250, by = 50)
 crossoverSizes = seq(0, 1.0, by = 0.25)
 mutationSizes = seq(0, 1.0, by = 0.25)
 elitePopulationSizes = seq(0, 1.0, by = 0.25)
-testInstances = 1
 
+#domyslne parametry
 defaultPopSize = 50
 defaultCrossover = 0.8
 defaultMutation = 0.1
 defaultElitePopulation = 0.05
 defaultIterationSize = 100
 
-if (isDebug) {
-  populationSizes = c(defaultPopSize)
-  crossoverSizes = c(defaultCrossover)
-  mutationSizes = c(defaultMutation)
-  elitePopulationSizes = c(defaultElitePopulation)
-  iterSizes = c(defaultIterationSize)
-  testInstances = 1
-}
-
-#PLOT DRAWING --- 3d plot u??ytej funkcji
+##rysowanie wykresu 3d dla uzytej funkcji
 showFunction3dPlot <- function(x1, x2, f) {
   persp3D(x1,
           x2,
@@ -42,12 +37,12 @@ showFunction3dPlot <- function(x1, x2, f) {
           color.palette = bl2gr.colors)
 }
 
-#PLOT DRAWING --- kontur z u??ytej funkcji
+#rysowanie wykresu temperaturowego dla danej funkcji
 showFunctionContour <- function(x1, x2, f) {
   filled.contour(x1, x2, f, color.palette = bl2gr.colors)
 }
 
-#PLOT DRAWING --- kontur z zaznaczonym wynikiem
+#rysowanie wykresu temperaturowego ze znalezionym rozwiazaniem
 showFunctionContourWithResult <- function(x1, x2, f, GA) {
   filled.contour(x1,
                  x2,
@@ -68,42 +63,24 @@ showFunctionContourWithResult <- function(x1, x2, f, GA) {
                  })
 }
 
-#PLOT DRAWING -- dziala issue #35 DONE UND MERGED
-showSummaryPlot <- function(GASummary) {
-  matplot(
-    rownames(GASummary),
-    GASummary,
-    type = 'l',
-    xlab = 'generations',
-    ylab = 'fitnes',
-    col = 1:6
-  )
-  legend(
-    'bottomright',
-    inset = .05,
-    legend = colnames(GASummary),
-    pch = 1,
-    horiz = TRUE,
-    col = 1:6
-  )
-}
-
-getPlotName <- function( ... ) {
-  sprintf("\\clearpage\\begin{figure}[!htbp]
+#generacja kodu latex do wstawienia wykresow
+getPlotName <- function(...) {
+  sprintf(
+    "\\clearpage\\begin{figure}[!htbp]
     \\centering
-\\mbox{
-\\subfigure{
-\\includegraphics[width=3in]{{{inc/results/%s}}}\\quad
-}
-\\subfigure{
-\\includegraphics[width=3in]{{{inc/results/%s}}}\\quad
-}
-}
-                 \\caption{%s %s p%s i%s c%s m%s e%s}
-                 \\end{figure}", ... )
+    \\mbox{
+    \\subfigure{
+    \\includegraphics[width=3in]{{{inc/results/%s}}}\\quad
+    }
+    \\subfigure{
+    \\includegraphics[width=3in]{{{inc/results/%s}}}\\quad
+    }
+    }
+    \\caption{%s %s p%s i%s c%s m%s e%s}
+    \\end{figure}", ... )
 }
 
-#GA CALCULATIONS --- liczy GA i zapisuje/wyswietla wykresy
+#minimalizacja GA oraz zapis wykresow
 calculateGA <-
   function(functionName,
            popSize,
@@ -117,46 +94,51 @@ calculateGA <-
       goTest(par = c(x1, x2) , fnName = functionName)
     }
     
-    #rozpatrywana przestrze??
+    #rozpatrywana przestrzen
     x1 <- x2 <- seq(-5.12, 5.12, by = 0.1)
     f <- outer(x1, x2, Vectorize(testFunctionWrapper))
     
+    #zapis wykresu 3d dla wybranej funkcji
     jpeg(file = sprintf("%s%s-3dplot.jpg", path, functionName))
     showFunction3dPlot(x1, x2, f)
     dev.off()
     
+    #zapis wykresu temperaturowego dla wybranej funkcji
     jpeg(file = sprintf("%s%s-contour.jpg", path, functionName))
     showFunctionContour(x1, x2, f)
     dev.off()
     
-    #oblicza liczb?? elitarnetj populacji
+    #obliczenie liczby populacji elitarnej
     elitsim = round(popSize * elitsimPercentage)
     
-    #6 wartosci (kolumn) x liczba iteracji (wiersze) 
-    #tmpGASummary = matrix(0, iterationSize, 6)
-    #ilosc uruchomie?? testu
+    #6 wartosci (kolumn) x liczba iteracji (wiersze)
+    tmpGASummary <- matrix(0, iterationSize, 6)
+    
+    #ilosc uruchomien testu
     for (test in 1:testInstances) {
       #minimizacja GA:
       GA <- ga(
         type = "real-valued",
-        fitness =  function(x) - Vectorize(testFunctionWrapper(x[1], x[2])),
+        fitness =  function(x)
+          - Vectorize(testFunctionWrapper(x[1], x[2])),
         # uwaga na minusa, bo szukamy glob. minimum
-        min = c(-5.12,-5.12),
+        min = c(-5.12, -5.12),
+        #rozpatrywana przestrzen
         max = c(5.12, 5.12),
+        #rozpatrywana przestrzen
         popSize = popSize,
         maxiter = iterationSize,
         elitism = elitsim,
         pcrossover = pcrossover,
         pmutation = pmutation,
-        run = 100,
-        monitor = FALSE
+        run = iterationSize,
+        monitor = FALSE #wylaczenie logowania
       )
-      #tmpGASummary <- GA@summary + tmpGASummary
+      #sumowanie rozwiazan
+      tmpGASummary <- GA@summary + tmpGASummary
     }
-    
-    #obliczenie sredniej dla 6 wartosci wyjsciowych z GA
-    #tmpGASummary <- tmpGASummary / testInstances
-    #showSummaryPlot(tmpGASummary) - nie dziala
+    #wyznaczenie sredniej arytmetycznej rozwiazan
+    tmpGASummary <- tmpGASummary / testInstances
     
     #nazwa pliku z uzytymi parametrami
     name <- sprintf(
@@ -169,33 +151,88 @@ calculateGA <-
       elitsimPercentage
     )
     
+    #nazwa wykresu
     filenamePlot = sprintf("generations-%s.jpg", name)
-    jpeg(file = sprintf("%s%s", path,filenamePlot))
-    plot(GA) #wykres wg generacji
+    max <- tmpGASummary[, 1]
+    mean <- tmpGASummary[, 2]
+    median <- tmpGASummary[, 4]
+    min <- tmpGASummary[, 6]
+    
+    #zapis wykresu
+    jpeg(file = sprintf("%s%s", path, filenamePlot))
+    
+    #zakres y dla rysowanego wykresu
+    minPlot <- min(mean) * 0.98
+    maxPlot <- max(max) * 1.02
+    
+    #rysowanie wykresu z zaznaczonymi wartosciami:
+    #- srednia arytmetyczna rozwiazan, 
+    #- mediana rozwiazan,
+    #- najlepszym rozwiazaniem 
+    #dla kazdej generacji 
+    plot(
+      mean,
+      type = "o",
+      col = "blue",
+      pch = 20,
+      ly = 2,
+      ann = FALSE,
+      ylim = c(minPlot, maxPlot)
+    ) 
+    lines(
+      max,
+      type = "o",
+      col = "green",
+      pch = 22,
+      lty = 4
+    )
+    lines(
+      median,
+      type = "o",
+      col = "red",
+      pch = 21,
+      lty = 3
+    )
+    title(xlab = "Generations")
+    title(ylab = "Fitness value")
+    grid()
+    legend(
+      "bottomright",
+      c("mean", "best", "median"),
+      cex = 0.8,
+      col = c("blue", "green", "red"),
+      pch = c(20, 22, 21),
+      lty = c(2, 4, 3)
+    )
     dev.off()
     
+    #zapis wykresu temperaturowego oraz zaznaczenie znalezionego wyniku
     fileNameContour = sprintf("result-%s.jpg", name)
-    jpeg(file = sprintf("%s%s", path,fileNameContour))
+    jpeg(file = sprintf("%s%s", path, fileNameContour))
     showFunctionContourWithResult(x1, x2, f, GA)
     dev.off()
     
     plotTitle <- "Test optymalizacji GA"
-    line = getPlotName(filenamePlot,
-                       fileNameContour,
-                       plotTitle,
-                functionName,
-                popSize,
-                iterationSize,
-                pcrossover,
-                pmutation,
-                elitsimPercentage)
-    write(line, file=sprintf("%s_latex.txt", path), append=TRUE)
+    line = getPlotName(
+      filenamePlot,
+      fileNameContour,
+      plotTitle,
+      functionName,
+      popSize,
+      iterationSize,
+      pcrossover,
+      pmutation,
+      elitsimPercentage
+    )
+    
+    #zapis kodu latex do wygenerowanych wykresow
+    write(line,
+          file = sprintf("%s_latex.txt", path),
+          append = TRUE)
   }
 
-#INVOKING GA WITH DIFFERENT PARAMERERS 
+#uruchomienie testow dla roznych parametrow dla danej funkcji z argumentu
 invokeTestsWithFunction <- function(functionName) {
-  print(sprintf("Test function name %s", functionName))
-  
   #zmiana wartosci populacji elitarnej
   for (elitsimPercentage in elitePopulationSizes) {
     calculateGA(
@@ -232,6 +269,20 @@ invokeTestsWithFunction <- function(functionName) {
     )
   }
   
+  #jednoczesna zmiana krzyzowania  i mutacji
+  for (pcrossover in crossoverSizes) {
+    for (pmutation in mutationSizes) {
+      calculateGA(
+        functionName,
+        defaultPopSize,
+        defaultIterationSize,
+        defaultElitePopulation,
+        pcrossover,
+        pmutation
+      )
+    }
+  }
+  
   #zmiana wartosci liczby iteracji
   for (iterationSize in iterSizes) {
     calculateGA(
@@ -242,7 +293,6 @@ invokeTestsWithFunction <- function(functionName) {
       defaultCrossover,
       defaultMutation
     )
-    
   }
   
   #zmiana liczby popopulacji
@@ -256,12 +306,11 @@ invokeTestsWithFunction <- function(functionName) {
       defaultMutation
     )
   }
-  #write.csv(GA@solution, file=sprintf("%s%s%s%s", path, "ga-",functionName, ".csv"))
-
 }
 
-
-#SZTART
+#START
 for (fnName in fnNames) {
+  print(sprintf("testing with function %s", fnName))
   invokeTestsWithFunction(fnName)
+  print(sprintf("tests end for function %s", fnName))
 }
