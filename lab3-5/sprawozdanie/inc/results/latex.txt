@@ -1,2 +1,0 @@
-"","x"
-"1","\includegraphics[width=0.7	extwidth]{generations-Bohachevsky1-p050-i100-c0.25-m0.10-e0.05.jpg}"
