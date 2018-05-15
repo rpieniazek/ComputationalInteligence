@@ -1,87 +1,33 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{5}
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Zastosowany algorytm optymalizacji}{5}
+\contentsline {section}{\numberline {2}Zastosowany algorytm optymalizacji}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Modyfikowane parametry}{5}
+\contentsline {subsection}{\numberline {2.1}Modyfikowane parametry}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Zastosowane narz\IeC {\k e}dzia implementacji}{5}
+\contentsline {subsection}{\numberline {2.2}Zastosowane narz\IeC {\k e}dzia implementacji}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}J\IeC {\k e}zyk R}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}J\IeC {\k e}zyk R}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Pakiet GA}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}Pakiet GA}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Pakiet globalOpts}{6}
+\contentsline {subsubsection}{\numberline {2.2.3}Pakiet globalOpts}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Funkcja Shuberta}{7}
+\contentsline {section}{\numberline {3}Funkcja Shuberta}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Wz\IeC {\'o}r analityczny}{7}
+\contentsline {subsection}{\numberline {3.1}Wz\IeC {\'o}r analityczny}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Wykres w ustalonym przedziale zmiennych}{7}
+\contentsline {subsection}{\numberline {3.2}Wykres w ustalonym przedziale zmiennych}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Ekstremum globalne}{7}
+\contentsline {subsection}{\numberline {3.3}Ekstremum globalne}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Optymalizacja poszukiwania ekstremum globalnego}{8}
+\contentsline {subsection}{\numberline {3.4}W\IeC {\l }asne operatory krzy\IeC {\.z}owania i mutacji}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Modyfikacja parametru elitarno\IeC {\'s}ci}{8}
+\contentsline {subsubsection}{\numberline {3.4.1}Zmiana funkcji krzy\IeC {\.z}owania}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Modyfikacja parametru mutacji}{11}
+\contentsline {section}{\numberline {4}Wnioski}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.3}Modyfikacja parametru krzy\IeC {\.z}owania}{14}
+\contentsline {section}{\numberline {5}Literatura}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.4}Modyfikacja parametru liczby iteracji}{17}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.5}Modyfikacja parametru rozmiaru populacji}{20}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Jednoczesna modyfikacja parametru krzy\IeC {\.z}owania i mutacji}{23}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Funkcja Bohachevsky'ego}{26}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Wz\IeC {\'o}r analityczny}{26}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Wykres funkcji}{26}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Ekstremum globalne}{26}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Optymalizacja}{28}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Modyfikacja parametru elitarno\IeC {\'s}ci}{28}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Modyfikacja parametru mutacji}{31}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Modyfikacja parametru krzy\IeC {\.z}owania}{34}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.4}Modyfikacja parametru liczby iteracji}{37}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.5}Modyfikacja parametru rozmiaru populacji}{40}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Jednoczesna modyfikacja parametru krzy\IeC {\.z}owania i mutacji}{43}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Funkcja Branina}{46}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Wz\IeC {\'o}r analityczny}{46}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Wykres w ustalonym przedziale zmiennych }{46}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Ekstremum globalne}{46}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Optymalizacja}{48}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1}Modyfikacja parametru elitarno\IeC {\'s}ci}{48}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.2}Modyfikacja parametru mutacji}{51}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.3}Modyfikacja parametru krzy\IeC {\.z}owania}{54}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.4}Modyfikacja parametru liczby iteracji}{57}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.5}Modyfikacja parametru rozmiaru populacji}{60}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}Jednoczesna modyfikacja parametru krzy\IeC {\.z}owania i mutacji}{63}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Wnioski}{65}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Literatura}{65}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Kod \IeC {\'z}r\IeC {\'o}d\IeC {\l }owy}{66}
+\contentsline {section}{\numberline {6}Kod \IeC {\'z}r\IeC {\'o}d\IeC {\l }owy}{7}
