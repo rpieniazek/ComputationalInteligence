@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1525766758327.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3679805002",
+    "id" : "90746B1C",
+    "lastKnownWriteTime" : 1525775465,
+    "last_content_update" : 1525775465,
+    "path" : "~/Documents/PWr/mgr/intObl/UNOLD/sprawozdanie/main.r",
+    "project_path" : "main.r",
+    "properties" : {
+        "cursorPosition" : "20,22",
+        "scrollLine" : "15"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
