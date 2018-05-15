@@ -23,6 +23,15 @@
 \usepackage{tabularx}
 
 
+\lstset{
+    language=R,   
+    extendedchars=true,
+    inputencoding=latin1,
+     basicstyle=\small
+}
+
+
+
 \begin{document}
 	\newgeometry{tmargin=4cm, bmargin=4cm, lmargin=3cm, rmargin=3cm}
 	
@@ -87,8 +96,9 @@ Pakiet GA zawiera zestaw funkcji ogólnego przeznaczenia do optymalizacji z wyko
 Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testów wydajnościowych algorytmów optymalizacji globalnej.
 
 \newpage
-\section{Funkcja Shuberta}
-	\subsection{Wzór analityczny}
+\section{Własne operatory krzyżowania i mutacji}
+\subsection{Funkcja wielomodalna - Funkcja Shuberta}
+	\subsubsection{Wzór analityczny}
 	   \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{inc/wzory/schubert}
@@ -97,7 +107,7 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     
     
 
-    \subsection{Wykres w ustalonym przedziale zmiennych}
+    \subsubsection{Wykres w ustalonym przedziale zmiennych}
     
     \begin{figure}[!htbp]
     \centering
@@ -106,8 +116,8 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     \end{figure}
     
    
-   \newpage
-    \subsection{Ekstremum globalne}
+
+    \subsubsection{Ekstremum globalne}
     
        \begin{figure}[!htbp]
     \centering
@@ -121,13 +131,27 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
      \caption{Minimum globalne dla funkcji Schuberta}
     \end{figure}
     
- \newpage
-\subsection{Własne operatory krzyżowania i mutacji}
+
     
 
-\subsubsection{Zmiana funkcji mutowania}
+\subsection{Zmiana funkcji mutowania}
+Poniżej przedstawiono własną propozycję implementacji funkcji mutowania.
+
+\begin{lstlisting}
+customMutation <- function(object, parent)
+    {
+      mod <- parent %% 2
+      if(mod == 0){
+        return (parent * 2)
+      } else {
+        return (parent / 2) + 1
+      }
+    }
+\end{lstlisting}
+
 	Na poniższych wykresach przedstawiono zestawienie rezultatów działania w przypadku domyślnej i własnej, zaimplementowanej funkcji mutacji. Wyniki dla funkcji domyślnej znajdują się po lewej stronie.
- 	\begin{figure}[!htbp]
+	
+ 	\begin{figure}[!h]
     \centering
     \mbox{
     \subfigure{
@@ -140,8 +164,7 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     \caption{Porównanie domyślnej funkcji mutowania z własną}
     \end{figure}
     
-    
-     \begin{figure}[!htbp]
+     \begin{figure}[!h]
     \centering
     \mbox{
     \subfigure{
@@ -154,17 +177,38 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     \caption{Porównanie domyślnej funkcji mutowania z własną - znalezione ekstrema}
     \end{figure}
     
-    
+    \newpage 
    Zmiana funkcji mutującej nie wpłynęła znacząco na wyniki końcowy. Mimo, iż w początkowej fazie wynik funkcji zbiegał do ekstremum wolniej niż w przypadku funkcji domyślnej, po 100 pokoleniach wynik jest na podobnym poziomie w obu przypadkach. Finalnie jednak algorytm z własną funkcją mutującą nie znalazł ekstremum globalnego. Widoczne jest to na wykresie temperaturowym, na którym zaznaczono rozwiązanie znalezione przez algorytm.
    
  W przypadku funkcji z własną funkcją mutowania można zauważyć spadek średniej i mediany wyników.
   
-  
-\subsubsection{Zmiana funkcji krzyżowania}
+
+\subsection{Zmiana funkcji krzyżowania}
+Poniżej przedstawiono własną propozycję implementacji funkcji krzyżowania.
+
+\begin{lstlisting}
+customCrossover <- function(object, parents)
+    {
+      parent_1 <- parents[[1]]
+      parent_2 <- parents[[2]] 
+      wektor_1 <- c(parent_1, parent_2)
+      fitness = testFunctionWrapper(parent_1, parent_2)
+      
+      tmp_parent_1 <- parents[[1]] + runif(1, -1, 1)
+      tmp_parent_2 <- parents[[2]] + runif(1, 1, -1)
+      tmp_wektor_1 <- c(parent_1, parent_2)
+      tmp_fitness = testFunctionWrapper(parent_1, parent_2)
+      
+      if(tmp_fitness > fitness){
+        return (list(children=matrix(tmp_wektor_1), fitness=tmp_fitness))
+      }
+      return (list(children=matrix(wektor_1), fitness=fitness))
+    }
+\end{lstlisting}
 
 	Na poniższych wykresach przedstawiono porównanie rezultatu działania algorytmu w przypadku zmiany funkcji krzyżowania z domyślnej na własną implementację. 
 	
-    \begin{figure}[!htbp]
+    \begin{figure}[!h]
     \centering
     \mbox{
     \subfigure{
@@ -176,9 +220,7 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     }
     \caption{Porównanie domyślnej funkcji krzyżowania z własną}
     \end{figure}
-    
-     
-     \begin{figure}[!htbp]
+     \begin{figure}[!h]
     \centering
     \mbox{
     \subfigure{
@@ -191,15 +233,13 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     \caption{Porównanie domyślnej funkcji krzyżowania z własną  - znalezione ekstrema}
     \end{figure}
 
+W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globalnego. Wartości średniej i mediany spadły znaczącą w stosunku do domyślnej implementacji. Mediana jest praktycznie równa zero. 
 
 
 
 \section{Wnioski}
 
-Badanie wpływu parametrów na jakość rozwiązań optymalnych poszukiwanych przez algorytm genetyczny jest zadaniem nietrywialnym, ale możliwym do wykonania. Zastosowanie pakietu GA dla języka R pozwoliło skupić się bardziej na testowaniu parametrów, a nie na implementacji algorytmu.
-
-Warto zauważyć, że na jakość rozwiązań ma wpływ nie tylko wartość parametru, ale również funkcja poddawana testom. Dla tych samych zestawów danych wykresy testów różnią się pomiędzy testowanymi funkcjami. W przypadku poszukiwania ekstremum globalnego dla funkcji z wieloma ekstremami lokalnymi i  niekorzystnym doborze parametrów  algorytm  może nie znaleźć poprawnego rozwiązania. Jest to spowodowane stochastycznym doborem populacji początkowej.
-
+Implementacja własnych funkcji mutowania i krzyżowania jest  zadaniem nietrywialnym, ale możliwym do wykonania.  Jakoś wyników uzyskanych przy własnych implementacjach znacząco odbiega od domyślnych funkcji.
 
 
 \section{Literatura}
@@ -214,18 +254,6 @@ hybrid optimisation, parallelisation and islands evolution", \url{https://arxiv.
 2015-02-15
 \item Abdal-Rahman Hedar, "Global Optimization Test Problems", \url{http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm}, dostęp online: 2018-05-04
 \end{enumerate}
-
-\section{Kod źródłowy}
-
-%\lstset{
-   % language=R,   
-   % extendedchars=true,
-  %  inputencoding=latin1,
-%     basicstyle=\small
-%}
-
-%\lstinputlisting{inc/main.r}
-
 
 
 
