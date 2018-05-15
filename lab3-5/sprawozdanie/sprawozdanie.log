@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.14)  15 MAY 2018 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.14)  15 MAY 2018 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -979,36 +979,28 @@ wozdanie.toc)
 \tf@lof=\write6
 \openout6 = `sprawozdanie.lof'.
 
- [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
- [3] [4]
-<inc/wzory/schubert.png, id=25, 488.82625pt x 87.32625pt>
+ [2] [3]
+<inc/wzory/schubert.png, id=21, 488.82625pt x 87.32625pt>
 File: inc/wzory/schubert.png Graphic file (type png)
 
 <use inc/wzory/schubert.png>
-Package pdftex.def Info: inc/wzory/schubert.png used on input line 128.
+Package pdftex.def Info: inc/wzory/schubert.png used on input line 94.
 (pdftex.def)             Requested size: 256.07741pt x 45.74702pt.
 
-<inc/wykresyfunkcji/schubert.jpg, id=27, 481.8pt x 481.8pt>
+<inc/wykresyfunkcji/schubert.jpg, id=23, 481.8pt x 481.8pt>
 File: inc/wykresyfunkcji/schubert.jpg Graphic file (type jpg)
 
 <use inc/wykresyfunkcji/schubert.jpg>
-Package pdftex.def Info: inc/wykresyfunkcji/schubert.jpg used on input line 140
+Package pdftex.def Info: inc/wykresyfunkcji/schubert.jpg used on input line 104
 .
 (pdftex.def)             Requested size: 256.07741pt x 256.0806pt.
-
+ [4 <./inc/wzory/schubert.png> <./inc/wykresyfunkcji/schubert.jpg>]
 <inc/wzory/schubert-global-minimum.png, id=28, 163.61125pt x 37.13875pt>
 File: inc/wzory/schubert-global-minimum.png Graphic file (type png)
 
 <use inc/wzory/schubert-global-minimum.png>
 Package pdftex.def Info: inc/wzory/schubert-global-minimum.png used on input li
-ne 148.
+ne 114.
 (pdftex.def)             Requested size: 128.0387pt x 29.06387pt.
 
 <inc/wykresyfunkcji/schubert-global-minimum.jpg, id=29, 481.8pt x 481.8pt>
@@ -1016,55 +1008,124 @@ File: inc/wykresyfunkcji/schubert-global-minimum.jpg Graphic file (type jpg)
 
 <use inc/wykresyfunkcji/schubert-global-minimum.jpg>
 Package pdftex.def Info: inc/wykresyfunkcji/schubert-global-minimum.jpg used on
- input line 154.
+ input line 120.
 (pdftex.def)             Requested size: 298.75264pt x 298.75702pt.
+ [5 <./inc/wzory/schubert-global-minimum.png> <./inc/wykresyfunkcji/schubert-gl
+obal-minimum.jpg>]
+<inc/results/default_ga.jpg, id=34, 481.8pt x 481.8pt>
+File: inc/results/default_ga.jpg Graphic file (type jpg)
 
+<use inc/results/default_ga.jpg>
+Package pdftex.def Info: inc/results/default_ga.jpg used on input line 139.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<inc/results/custom-mutation.jpg, id=35, 481.8pt x 481.8pt>
+File: inc/results/custom-mutation.jpg Graphic file (type jpg)
 
-[5
-
- <./inc/wzory/schubert.png> <./inc/wykresyfunkcji/schubert.jpg> <./inc/wzory/sc
-hubert-global-minimum.png>]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 177
+<use inc/results/custom-mutation.jpg>
+Package pdftex.def Info: inc/results/custom-mutation.jpg used on input line 139
 .
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 139--140
+ [][] 
+ []
+
+<inc/results/default_ga_result.jpg, id=36, 481.8pt x 481.8pt>
+File: inc/results/default_ga_result.jpg Graphic file (type jpg)
+
+<use inc/results/default_ga_result.jpg>
+Package pdftex.def Info: inc/results/default_ga_result.jpg used on input line 1
+53.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/custom-mutation-result.jpg, id=37, 481.8pt x 481.8pt>
+File: inc/results/custom-mutation-result.jpg Graphic file (type jpg)
+
+<use inc/results/custom-mutation-result.jpg>
+Package pdftex.def Info: inc/results/custom-mutation-result.jpg used on input l
+ine 153.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 153--154
+ [][] 
+ []
+
+[6 <./inc/results/default_ga.jpg> <./inc/results/custom-mutation.jpg> <./inc/re
+sults/default_ga_result.jpg> <./inc/results/custom-mutation-result.jpg>]
+File: inc/results/default_ga.jpg Graphic file (type jpg)
+
+<use inc/results/default_ga.jpg>
+Package pdftex.def Info: inc/results/default_ga.jpg used on input line 176.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/custom-crossover.jpg, id=42, 481.8pt x 481.8pt>
+File: inc/results/custom-crossover.jpg Graphic file (type jpg)
+
+<use inc/results/custom-crossover.jpg>
+Package pdftex.def Info: inc/results/custom-crossover.jpg used on input line 17
+6.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 176--177
+ [][] 
+ []
+
+File: inc/results/default_ga_result.jpg Graphic file (type jpg)
+<use inc/results/default_ga_result.jpg>
+Package pdftex.def Info: inc/results/default_ga_result.jpg used on input line 1
+90.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/custom-crossover-result.jpg, id=43, 481.8pt x 481.8pt>
+File: inc/results/custom-crossover-result.jpg Graphic file (type jpg)
+
+<use inc/results/custom-crossover-result.jpg>
+Package pdftex.def Info: inc/results/custom-crossover-result.jpg used on input 
+line 190.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 190--191
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 205
+.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [6 <./inc/wykresyfunkcji/schubert-global-minimum.jpg>]
-Overfull \hbox (13.70726pt too wide) in paragraph at lines 183--185
+) [7 <./inc/results/custom-crossover.jpg>]
+Overfull \hbox (13.70726pt too wide) in paragraph at lines 211--213
 []\OT4/cmr/m/n/10 Katharine Mul-len, "Pac-ka-ge 'glo-ba-lOpt-Te-sts'", $\OT4/cm
 tt/m/n/10 https : / / cran . r-[]project . org / web / packages /
  []
 
-[7] (./sprawozdanie.aux)
+[8 <./inc/results/custom-crossover-result.jpg>] (./sprawozdanie.aux)
 Package logreq Info: Writing requests to 'sprawozdanie.run.xml'.
 \openout1 = `sprawozdanie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10974 strings out of 492995
- 178448 string characters out of 6132704
- 610567 words of memory out of 5000000
- 14369 multiletter control sequences out of 15000+600000
+ 10986 strings out of 492995
+ 179171 string characters out of 6132704
+ 608559 words of memory out of 5000000
+ 14377 multiletter control sequences out of 15000+600000
  13695 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,35p,1137b,698s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/local/t
 exlive/2017/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2017/tex
 mf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/e
-nc/dvips/pl/plsc.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/p
-lbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plbx12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plcsc10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie.pdf (8 pages, 230589 bytes).
+nc/dvips/pl/plsc.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/
+plbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plbx12.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plcsc10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/pl/pltt10.pfb>
+Output written on sprawozdanie.pdf (9 pages, 511646 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

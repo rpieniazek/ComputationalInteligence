@@ -72,39 +72,6 @@ W laboratorium zastosowano algorytmy genetyczne będące klasą algorytmów ewol
 Algorytmy ewolucyjne stanowią kierunek sztucznej inteligencji, która wykorzystuje i symuluje ewolucję biologiczną. Wszystkie algorytmy tej klasy symulują podstawowe zachowania w teorii ewolucji biologicznej - procesy selekcji, mutacji i reprodukcji. Zachowanie jednostek zależy od środowiska. Zbiór jednostek nazywa się populacją. Taka populacja ewoluuje zgodnie z regułami selekcji zgodnie z funkcją celu przypisaną do środowiska. Propagowane do kolejnych pokoleń są tylko najbardziej dopasowane osobniki.
 
 
-\subsection{Modyfikowane parametry}
-
-W celu badania wpływu zmiennych na zachowanie algorytmu genetycznego modyfikowano następujące parametry:
-
-\begin{itemize}
-\item \textbf{elitarność} - Procentowa wartość populacji, która zostaje przeniesiona do następnego pokolenia bez zmian. Niezerowa wartość gwarantuje, że jakość rozwiązania nie zmniejszy się z pokolenia na pokolenie.
-
-\item \textbf{mutacja} - Przypadkowa zmiana genomu w algorytmie genetycznym, analogicznie do mutacji biologicznej.
-
-\item \textbf{krzyżowanie} -  Połączenie niektórych (wybranych losowo) genotypów w jeden. Kojarzenie ma sprawić, że potomek dwóch osobników rodzicielskich ma zespół cech, który jest kombinacją ich cech (może się zdarzyć, że tych najlepszych).
-
-\item \textbf{liczba iteracji} - Ilość pokoleń  
-\item \textbf{rozmiar populacji} - Ilość osobników w jednym pokoleniu.
-\end{itemize}
-
-
-\begin{table}[!htbp]
-\centering
-\caption{Wartości modyfikowanych parametrów}
-\label{my-label}
-\begin{tabular}{|l|l|}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\textbf{Parametr}      & \textbf{Wartości}      \\ \hline
-populacja              & 50, 100, 150, 200, 250 \\ \hline
-liczba iteracji        & 50, 100, 150, 200, 250 \\ \hline
-p. krzyżowania         & 0, 0.25, 0.5, 0.75, 1  \\ \hline
-p. mutacji             & 0, 0.25, 0.5, 0.75, 1  \\ \hline
-p. populacji elitarnej & 0, 0.25, 0.5, 0.75, 1  \\ \hline
-\end{tabular}
-\end{table}
-
-
 \subsection{Zastosowane narzędzia implementacji}
 
 \subsubsection{Język R}
@@ -119,8 +86,7 @@ Pakiet GA zawiera zestaw funkcji ogólnego przeznaczenia do optymalizacji z wyko
 \subsubsection{Pakiet globalOpts}
 Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testów wydajnościowych algorytmów optymalizacji globalnej.
 
-
-\clearpage
+\newpage
 \section{Funkcja Shuberta}
 	\subsection{Wzór analityczny}
 	   \begin{figure}[!htbp]
@@ -130,55 +96,107 @@ Pakiet zawierający implementację funkcji przydatnych do przeprowadzania testó
     \end{figure}
     
     
- 
-    
-    
+
     \subsection{Wykres w ustalonym przedziale zmiennych}
     
-    \begin{figure}[!h]
+    \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{inc/wykresyfunkcji/schubert}
      \caption{Wykres  funkcji Schuberta}
     \end{figure}
     
+   
+   \newpage
     \subsection{Ekstremum globalne}
     
-       \begin{figure}[!h]
+       \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.3\textwidth]{inc/wzory/schubert-global-minimum}
      \caption{Minimum globalne dla funkcji Schuberta}
     \end{figure}
     
-       \begin{figure}[!h]
+       \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{inc/wykresyfunkcji/schubert-global-minimum}
      \caption{Minimum globalne dla funkcji Schuberta}
     \end{figure}
     
+ \newpage
 \subsection{Własne operatory krzyżowania i mutacji}
     
+
 \subsubsection{Zmiana funkcji mutowania}
-     \clearpage\begin{figure}[!htbp]
+	Na poniższych wykresach przedstawiono zestawienie rezultatów działania w przypadku domyślnej i własnej, zaimplementowanej funkcji mutacji. Wyniki dla funkcji domyślnej znajdują się po lewej stronie.
+ 	\begin{figure}[!htbp]
     \centering
     \mbox{
     \subfigure{
     \includegraphics[width=3in]{{{inc/results/default_ga}}}\quad
     }
     \subfigure{
-    \includegraphics[width=3in]{{{inc/results/default_ga_result}}\quad
+    \includegraphics[width=3in]{{{inc/results/custom-mutation}}}\quad
     }
     }
-    \caption{Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.05}
+    \caption{Porównanie domyślnej funkcji mutowania z własną}
     \end{figure}
-
+    
+    
+     \begin{figure}[!htbp]
+    \centering
+    \mbox{
+    \subfigure{
+    \includegraphics[width=3in]{{{inc/results/default_ga_result}}}\quad
+    }
+    \subfigure{
+    \includegraphics[width=3in]{{{inc/results/custom-mutation-result}}}\quad
+    }
+    }
+    \caption{Porównanie domyślnej funkcji mutowania z własną - znalezione ekstrema}
+    \end{figure}
+    
+    
+   Zmiana funkcji mutującej nie wpłynęła znacząco na wyniki końcowy. Mimo, iż w początkowej fazie wynik funkcji zbiegał do ekstremum wolniej niż w przypadku funkcji domyślnej, po 100 pokoleniach wynik jest na podobnym poziomie w obu przypadkach. Finalnie jednak algorytm z własną funkcją mutującą nie znalazł ekstremum globalnego. Widoczne jest to na wykresie temperaturowym, na którym zaznaczono rozwiązanie znalezione przez algorytm.
+   
+ W przypadku funkcji z własną funkcją mutowania można zauważyć spadek średniej i mediany wyników.
+  
+  
 \subsubsection{Zmiana funkcji krzyżowania}
 
-                 
+	Na poniższych wykresach przedstawiono porównanie rezultatu działania algorytmu w przypadku zmiany funkcji krzyżowania z domyślnej na własną implementację. 
+	
+    \begin{figure}[!htbp]
+    \centering
+    \mbox{
+    \subfigure{
+    \includegraphics[width=3in]{{{inc/results/default_ga}}}\quad
+    }
+    \subfigure{
+    \includegraphics[width=3in]{{{inc/results/custom-crossover}}}\quad
+    }
+    }
+    \caption{Porównanie domyślnej funkcji krzyżowania z własną}
+    \end{figure}
+    
+     
+     \begin{figure}[!htbp]
+    \centering
+    \mbox{
+    \subfigure{
+    \includegraphics[width=3in]{{{inc/results/default_ga_result}}}\quad
+    }
+    \subfigure{
+    \includegraphics[width=3in]{{{inc/results/custom-crossover-result}}}\quad
+    }
+    }
+    \caption{Porównanie domyślnej funkcji krzyżowania z własną  - znalezione ekstrema}
+    \end{figure}
+
+
 
 
 \section{Wnioski}
 
-Badanie wpływu paramterów na jakość rozwiązań optymalnych poszukiwanych przez algorytm genetyczny jest zadaniem nietrywialnym, ale możliwym do wykonania. Zastosowanie pakietu GA dla języka R pozwoliło skupić się bardziej na testowaniu parametrów, a nie na implementacji algorytmu.
+Badanie wpływu parametrów na jakość rozwiązań optymalnych poszukiwanych przez algorytm genetyczny jest zadaniem nietrywialnym, ale możliwym do wykonania. Zastosowanie pakietu GA dla języka R pozwoliło skupić się bardziej na testowaniu parametrów, a nie na implementacji algorytmu.
 
 Warto zauważyć, że na jakość rozwiązań ma wpływ nie tylko wartość parametru, ale również funkcja poddawana testom. Dla tych samych zestawów danych wykresy testów różnią się pomiędzy testowanymi funkcjami. W przypadku poszukiwania ekstremum globalnego dla funkcji z wieloma ekstremami lokalnymi i  niekorzystnym doborze parametrów  algorytm  może nie znaleźć poprawnego rozwiązania. Jest to spowodowane stochastycznym doborem populacji początkowej.
 
