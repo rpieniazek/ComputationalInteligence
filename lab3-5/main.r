@@ -74,19 +74,30 @@ calculateGA <-
     
     customMutation <- function(object, parent)
     {
-      #print(parent)
-      #print(object)
-      parent * 2
+      mod <- parent %% 2
+      if(mod == 0){
+        return (parent * 2)
+      } else {
+        return (parent / 2) + 1
+      }
     }
     
     customCrossover <- function(object, parents)
     {
-      output <- parents[[1]] + parents[[2]]
-      #print(output)
-      #print(parents)
-      wektor_1 <- c(parents[[1]] + parents[[2]],  parents[[1]] - parents[[2]])
+      parent_1 <- parents[[1]]
+      parent_2 <- parents[[2]] 
+      wektor_1 <- c(parent_1, parent_2)
+      fitness = testFunctionWrapper(parent_1, parent_2)
       
-      return (list(children=matrix(wektor_1), fitness=testFunctionWrapper(parents[[1]], parents[[2]])))
+      tmp_parent_1 <- parents[[1]] + runif(1, -1, 1)
+      tmp_parent_2 <- parents[[2]] + runif(1, 1, -1)
+      tmp_wektor_1 <- c(parent_1, parent_2)
+      tmp_fitness = testFunctionWrapper(parent_1, parent_2)
+      
+      if(tmp_fitness > fitness){
+        return (list(children=matrix(tmp_wektor_1), fitness=tmp_fitness))
+      }
+      return (list(children=matrix(wektor_1), fitness=fitness))
     }
     
     #rozpatrywana przestrzen
