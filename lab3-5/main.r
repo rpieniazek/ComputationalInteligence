@@ -11,7 +11,7 @@ path = '/Users/evelan/Desktop/ga.nosync/'
 fnNames = c("Schubert")
 
 # liczba przebiegow
-testInstances = 30
+testInstances = 20
 
 #domyslne parametry
 defaultPopSize = 50
@@ -72,6 +72,23 @@ calculateGA <-
       goTest(par = c(x1, x2) , fnName = functionName)
     }
     
+    customMutation <- function(object, parent)
+    {
+      #print(parent)
+      #print(object)
+      parent * 2
+    }
+    
+    customCrossover <- function(object, parents)
+    {
+      output <- parents[[1]] + parents[[2]]
+      #print(output)
+      #print(parents)
+      wektor_1 <- c(parents[[1]] + parents[[2]],  parents[[1]] - parents[[2]])
+      
+      return (list(children=matrix(wektor_1), fitness=testFunctionWrapper(parents[[1]], parents[[2]])))
+    }
+    
     #rozpatrywana przestrzen
     x1 <- x2 <- seq(-5.12, 5.12, by = 0.1)
     f <- outer(x1, x2, Vectorize(testFunctionWrapper))
@@ -91,6 +108,8 @@ calculateGA <-
           - Vectorize(testFunctionWrapper(x[1], x[2])),
         # uwaga na minusa, bo szukamy glob. minimum
         min = c(-5.12, -5.12),
+        #mutation = customMutation,
+        crossover = customCrossover,
         #rozpatrywana przestrzen
         max = c(5.12, 5.12),
         #rozpatrywana przestrzen
