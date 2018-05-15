@@ -1,0 +1,205 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Wz\IeC {\'o}r analityczny funkcji Schuberta}}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces Wykres funkcji Schuberta}}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Minimum globalne dla funkcji Schuberta}}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces Minimum globalne dla funkcji Schuberta}}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0}}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.25}}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.5}}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.75}}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e1}}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0 e0.05}}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.25 e0.05}}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.5 e0.05}}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.75 e0.05}}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m1 e0.05}}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0 m0.1 e0.05}}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {16}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.25 m0.1 e0.05}}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.5 m0.1 e0.05}}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.75 m0.1 e0.05}}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {19}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c1 m0.1 e0.05}}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {20}{\ignorespaces Test optymalizacji GA Schubert p50 i50 c0.8 m0.1 e0.05}}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {21}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.05}}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {22}{\ignorespaces Test optymalizacji GA Schubert p50 i150 c0.8 m0.1 e0.05}}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {23}{\ignorespaces Test optymalizacji GA Schubert p50 i200 c0.8 m0.1 e0.05}}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {24}{\ignorespaces Test optymalizacji GA Schubert p50 i250 c0.8 m0.1 e0.05}}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {25}{\ignorespaces Test optymalizacji GA Schubert p50 i100 c0.8 m0.1 e0.05}}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {26}{\ignorespaces Test optymalizacji GA Schubert p100 i100 c0.8 m0.1 e0.05}}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {27}{\ignorespaces Test optymalizacji GA Schubert p150 i100 c0.8 m0.1 e0.05}}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {28}{\ignorespaces Test optymalizacji GA Schubert p200 i100 c0.8 m0.1 e0.05}}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {29}{\ignorespaces Test optymalizacji GA Schubert p250 i100 c0.8 m0.1 e0.05}}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {30}{\ignorespaces Test optymalizacji GA Schubert p050 i100 c0.0 m0.0 e0.05}}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {31}{\ignorespaces Test optymalizacji GA Schubert p050 i100 c0.25 m0.25 e0.05}}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {32}{\ignorespaces Test optymalizacji GA Schubert p050 i100 c0.50 m0.50 e0.05}}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {33}{\ignorespaces Test optymalizacji GA Schubert p050 i100 c0.75 m0.75 e0.05}}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {34}{\ignorespaces Test optymalizacji GA Schubert p050 i100 c1.00 m1.00 e0.05}}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {35}{\ignorespaces Wz\IeC {\'o}r analityczny funkcji Bochachevsky'ego}}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {36}{\ignorespaces Wz\IeC {\'o}r analityczny funkcji Bochachevsky'ego}}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {37}{\ignorespaces Minimum globalne funkcji Bochachevsky'ego}}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {38}{\ignorespaces Minimum globalne funkcji Bochachevsky'ego}}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {39}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0}}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {40}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0.25}}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {41}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0.5}}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {42}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0.75}}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {43}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e1}}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {44}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0 e0.05}}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {45}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.25 e0.05}}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {46}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.5 e0.05}}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {47}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.75 e0.05}}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {48}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m1 e0.05}}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {49}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0 m0.1 e0.05}}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {50}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.25 m0.1 e0.05}}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {51}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.5 m0.1 e0.05}}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {52}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.75 m0.1 e0.05}}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {53}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c1 m0.1 e0.05}}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {54}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i50 c0.8 m0.1 e0.05}}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {55}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0.05}}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {56}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i150 c0.8 m0.1 e0.05}}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {57}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i200 c0.8 m0.1 e0.05}}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {58}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i250 c0.8 m0.1 e0.05}}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {59}{\ignorespaces Test optymalizacji GA Bohachevsky1 p50 i100 c0.8 m0.1 e0.05}}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {60}{\ignorespaces Test optymalizacji GA Bohachevsky1 p100 i100 c0.8 m0.1 e0.05}}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {61}{\ignorespaces Test optymalizacji GA Bohachevsky1 p150 i100 c0.8 m0.1 e0.05}}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {62}{\ignorespaces Test optymalizacji GA Bohachevsky1 p200 i100 c0.8 m0.1 e0.05}}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {63}{\ignorespaces Test optymalizacji GA Bohachevsky1 p250 i100 c0.8 m0.1 e0.05}}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {64}{\ignorespaces Test optymalizacji GA Bohachevsky1 p050 i100 c0.0 m0.0 e0.05}}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {65}{\ignorespaces Test optymalizacji GA Bohachevsky1 p050 i100 c0.25 m0.25 e0.05}}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {66}{\ignorespaces Test optymalizacji GA Bohachevsky1 p050 i100 c0.50 m0.50 e0.05}}{44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {67}{\ignorespaces Test optymalizacji GA Bohachevsky1 p050 i100 c0.75 m0.75 e0.05}}{44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {68}{\ignorespaces Test optymalizacji GA Bohachevsky1 p050 i100 c1.00 m1.00 e0.05}}{45}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {69}{\ignorespaces Wz\IeC {\'o}r analityczny funkcji Branina}}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {70}{\ignorespaces Wz\IeC {\'o}r analityczny funkcji Branina}}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {71}{\ignorespaces Minimum globalne funkcji Branina}}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {72}{\ignorespaces Minimum globalne funkcji Branina}}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {73}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e0}}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {74}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e0.25}}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {75}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e0.5}}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {76}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e0.75}}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {77}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e1}}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {78}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0 e0.05}}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {79}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.25 e0.05}}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {80}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.5 e0.05}}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {81}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.75 e0.05}}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {82}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m1 e0.05}}{53}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {83}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0 m0.1 e0.05}}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {84}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.25 m0.1 e0.05}}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {85}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.5 m0.1 e0.05}}{55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {86}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.75 m0.1 e0.05}}{55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {87}{\ignorespaces Test optymalizacji GA Branin p50 i100 c1 m0.1 e0.05}}{56}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {88}{\ignorespaces Test optymalizacji GA Branin p50 i50 c0.8 m0.1 e0.05}}{57}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {89}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e0.05}}{57}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {90}{\ignorespaces Test optymalizacji GA Branin p50 i150 c0.8 m0.1 e0.05}}{58}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {91}{\ignorespaces Test optymalizacji GA Branin p50 i200 c0.8 m0.1 e0.05}}{58}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {92}{\ignorespaces Test optymalizacji GA Branin p50 i250 c0.8 m0.1 e0.05}}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {93}{\ignorespaces Test optymalizacji GA Branin p50 i100 c0.8 m0.1 e0.05}}{60}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {94}{\ignorespaces Test optymalizacji GA Branin p100 i100 c0.8 m0.1 e0.05}}{60}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {95}{\ignorespaces Test optymalizacji GA Branin p150 i100 c0.8 m0.1 e0.05}}{61}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {96}{\ignorespaces Test optymalizacji GA Branin p200 i100 c0.8 m0.1 e0.05}}{61}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {97}{\ignorespaces Test optymalizacji GA Branin p250 i100 c0.8 m0.1 e0.05}}{62}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {98}{\ignorespaces Test optymalizacji GA Branin p050 i100 c0.0 m0.0 e0.05}}{63}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {99}{\ignorespaces Test optymalizacji GA Branin p050 i100 c0.25 m0.25 e0.05}}{63}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {100}{\ignorespaces Test optymalizacji GA Branin p050 i100 c0.50 m0.50 e0.05}}{64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {101}{\ignorespaces Test optymalizacji GA Branin p050 i100 c0.75 m0.75 e0.05}}{64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {102}{\ignorespaces Test optymalizacji GA Branin p050 i100 c1.00 m1.00 e0.05}}{65}
