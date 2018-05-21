@@ -6,8 +6,17 @@ library(GA)
 library(globalOptTests)
 library(TSP)
 
-drill <- read_TSPLIB("~/Documents/bays29.tsp")
-D <- as.matrix(drill)
+defaultPopSize = 50
+defaultIterationSize = 100
+defaultCrossover = 0.8
+defaultMutation = 0.1
+testInstances = 10
+path = "~/Desktop/ga.nosync/"
+
+populationSizes = seq(50, 250, by = 50)
+iterSizes = seq(50, 250, by = 50)
+crossoverSizes = seq(0, 1.0, by = 0.25)
+mutationSizes = seq(0, 1.0, by = 0.25)
 
 # given a tour, calculate the total distance
 tourLength <- function(tour, distMatrix) {
@@ -17,36 +26,79 @@ tourLength <- function(tour, distMatrix) {
 }
 
 # inverse of thetotal distance is the fitness
-tpsFitness <- function(tour, ...) 1/tourLength(tour, ...)
+tpsFitness <- function(tour, ...) 1 / tourLength(tour, ...)
 
-# 2-d coordinates
-mds <- cmdscale(D)
-x <- mds[, 1]
-y <- -mds[, 2]
-n <- length(x)
-
-B <- 100
-fitnessMat <- matrix(0, B, 2)
-
-GA.fit <- ga(type = "permutation", fitness = tpsFitness, distMatrix = D, 
-             min = 1, max = nrow(D), popSize = 10, maxiter = 50, run = 100, 
-             keepBest=TRUE,
-             pmutation = 0.2, monitor = NULL)
-
-for (b in seq(1, B)) {
-  # run a GA algorithm
-  GA.rep <- ga(type = "permutation", fitness = tpsFitness, distMatrix = D, 
-               min = 1, max = nrow(D), popSize = 10, maxiter = 50, run = 100, 
-               keepBest=TRUE,
-               pmutation = 0.2, monitor = NULL)
+calculateGA <- function(fileName, popSize, iterationSize, crossover, mutation) {
+  drill <- read_TSPLIB(sprintf("~/Documents/%s", fileName))
+  D <- as.matrix(drill)
+  fitnessMat <- matrix(0, testInstances, 2)
   
-  fitnessMat[b, 1] <- GA.rep@summary[GA.rep@iter]
-  fitnessMat[b, 2] <- GA.rep@summary[GA.rep@iter]
+  for (instanceIndex in seq(1, testInstances)) {
+    # run a GA algorithm
+    GA.rep <-
+      ga(
+        type = "permutation",
+        fitness = tpsFitness,
+        distMatrix = D,
+        min = 1,
+        max = nrow(D),
+        popSize = popSize,
+        keepBest = TRUE,
+        pmutation = mutation,
+        pcrossover = crossover,
+        maxiter = iterationSize,
+        run = iterationSize,
+        monitor = FALSE
+      )
+    
+    fitnessMat[instanceIndex, 1] <- GA.rep@summary[GA.rep@iter]
+    fitnessMat[instanceIndex, 2] <- GA.rep@summary[GA.rep@iter]
+  }
+  
+  name = sprintf("%s pop-%s iter-%s cross-%s", fileName, popSize, iterationSize, crossover, mutation)
+  jpeg(file = sprintf("%s%s.jpg", path, name))
+  plot(GA.rep, main = name)
+  points(rep(50, testInstances), fitnessMat[, 1], pch = 16, col = "lightgrey")
+  points(rep(55, testInstances), fitnessMat[, 2], pch = 17, col = "lightblue")
+  dev.off()
 }
 
+invoke <- function(fileName) {
+  
+  #zmiana wartosci krzyzowania
+  for (pcrossover in crossoverSizes) {
+    calculateGA(
+      fileName,
+      defaultPopSize,
+      defaultIterationSize,
+      pcrossover,
+      defaultMutation
+    )
+  }
+  
+  #zmiana wartosci liczby iteracji
+  for (iterationSize in iterSizes) {
+    calculateGA(
+      fileName,
+      defaultPopSize,
+      iterationSize,
+      defaultCrossover,
+      defaultMutation
+    )
+  }
+  
+  #zmiana liczby popopulacji
+  for (popSize in populationSizes) {
+    calculateGA(
+      fileName,
+      popSize,
+      defaultIterationSize,
+      defaultCrossover,
+      defaultMutation
+    )
+  }
+}
 
-
-plot(GA.fit, main = "Best and Avg at 50th iteration over 100 simulations")
-points(rep(50, B), fitnessMat[, 1], pch = 16, col = "lightgrey")
-points(rep(55, B), fitnessMat[, 2], pch = 17, col = "lightblue")
-
+invoke('bays29.tsp')
+invoke('gr17.tsp')
+invoke('gr120.tsp')

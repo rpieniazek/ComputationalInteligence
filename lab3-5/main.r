@@ -20,6 +20,12 @@ defaultMutation = 0.1
 defaultElitePopulation = 0.05
 defaultIterationSize = 100
 
+populationSizes = seq(50, 250, by = 50)
+iterSizes = seq(50, 250, by = 50)
+crossoverSizes = seq(0, 1.0, by = 0.25)
+mutationSizes = seq(0, 1.0, by = 0.25)
+elitePopulationSizes = seq(0, 1.0, by = 0.25)
+
 #rysowanie wykresu temperaturowego ze znalezionym rozwiazaniem
 showFunctionContourWithResult <- function(x1, x2, f, GA) {
   filled.contour(x1,
@@ -123,7 +129,8 @@ calculateGA <-
         crossover = customCrossover,
         #rozpatrywana przestrzen
         max = c(5.12, 5.12),
-        #rozpatrywana przestrzen
+        maxiter = iterationSize,
+        run = iterationSize,
         monitor = FALSE #wylaczenie logowania
       )
       #sumowanie rozwiazan
