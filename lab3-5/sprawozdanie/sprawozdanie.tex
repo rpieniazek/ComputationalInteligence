@@ -235,8 +235,318 @@ customCrossover <- function(object, parents)
 
 W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globalnego. Wartości średniej i mediany spadły znaczącą w stosunku do domyślnej implementacji. Mediana jest praktycznie równa zero. 
 
+\clearpage
+\section{Problem komiwojażera}
+
+\subsection{Opis problemu}
+Problem komiwojażera jest jednym z najsłynniejszych problemów informatyki i badań operacyjnych. Często nazywa się skrótem TSP, skrót nazwy angielskiej nazwy "podróżujący sprzedawca". Można go sformułować w następujący sposób:
+"Biorąc pod uwagę n miast wraz z odległością między każdą parą tych miast, znajdź najkrótszą trasę, która przebiega przez każde miasto dokładnie raz."
+
+\clearpage
+\subsection{Instancja 1 - \textit{bays29}}
+
+\subsubsection{Zmiana parametru krzyżowania}
+Zwiększanie parametru krzyżowania zmniejsza wartość średniej i mediany, oznacza to, że średnie wyniki w populacji są coraz gorsze. Algorytm znalazł najlepsze rozwiązanie dla wartości parametru 0.5. 
+
+  \begin{figure}[!htbp]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-0.25}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-0.5}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-0.75}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-1}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru krzyżowania}
+    \end{figure}
+    
+    \clearpage
+\subsubsection{Zmiana parametru liczby pokoleń}
+
+Zwiększanie parametru liczby pokoleń zwiększa wartość znajdowanego rozwiązania. Poziom wartości średniej i mediany są bliskie najlepszemu rozwiązaniu.
+
+\begin{figure}[!htbp]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp_pop-50_iter-50_cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-0.8}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-150-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-200-cross-0.8}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru liczby pokoleń}
+    \end{figure}
+    
+ \clearpage
+\subsubsection{Zmiana parametru rozmiaru populacji}
+
+Wraz ze wzrostem ilości osobników w pokoleniu algorytm znajduje coraz lepsze rozwiązania. Wartość średniej i mediany maleje wraz ze wzrostem rozmiaru populacji. 
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-100-iter-100-cross-0.8}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-150-iter-100-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/bays29.tsp-pop-200-iter-100-cross-0.8}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru rozmiaru populacji}
+    \end{figure}
+  
+  \clearpage
+\subsubsection{Jednoczesna zmiana krzyżowania i mutacji oraz rozmiaru populacji i liczby pokoleń}
+
+Algorytm uzyskał najlepszy wynik gdy populacja wynosiła 100, a ilość pokoleń 80. Analiza wykresu temperaturowego jednoczesnej zmiany mutowania i krzyżowania nie pozwala wysunąć jednoznacznych wniosków. Można wydzielić dwa obszary parametrów dla których algorytm znalazł lepsze rozwiązanie: krzyżowanie :0.6 i mutacja 0.4 oraz krzyżowanie :0.8 i mutacja 0.75
+
+\begin{figure}[!h]
+    \centering
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/tsp/bays29_mutation_crossover_temperature}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/tsp/bays29_population_iteration_temperature}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
+    \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\subsection{Instancja 2 - \textit{gr17}}
+Średnie wartości są zbliżone do najlepszego rozwiązania dla najmniejszych wartości parametru krzyżowania. Wzrost tego parametru skutkuje zmniejszeniem średniej wyników w każdej populacji.
+\subsubsection{Zmiana parametru krzyżowania}
+  \begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-100-cross-0.25}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-100-cross-0.5}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-100-cross-0.75}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-100-cross-1}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru krzyżowania}
+    \end{figure}
+    
+    
+     \clearpage
+\subsubsection{Zmiana parametru liczby pokoleń}
+
+Wzrost parametru liczby pokoleń jest jednoznaczny ze wzrostem wartości najlepszego rozwiązania. Zmniejsza się również wartość średnia i mediana. 
+
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-50-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-100-cross-0.8}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-150-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-200-cross-0.8}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru liczby pokoleń}
+    \end{figure}
+    
+    
+    \clearpage
+\subsubsection{Zmiana parametru rozmiaru populacji}
+
+Wartość znajdowanego rozwiązania jest na stałym poziomie niezależnie od ilości osobników. Zmniejsza się jednak średnia wartość dla każdego pokolenia. 
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-50-iter-100-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-100-iter-100-cross-0.8}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-150-iter-100-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr17.tsp-pop-200-iter-100-cross-0.8}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru rozmiaru populacji}
+    \end{figure}
+    
+    
+    \clearpage
+\subsubsection{Jednoczesna zmiana krzyżowania i mutacji oraz rozmiaru populacji i liczby pokoleń}
+
+Dla tej instancji nie znaleziono korelacji między jednoczesną zmianą wartości krzyżowania i mutacji a polepszeniem uzyskiwanego wyniku. 
+
+Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzyskano dla 100 osobników i 75 pokoleń.
+
+\begin{figure}[!h]
+    \centering
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/tsp/gr17_mutation_crossover_temperature}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/tsp/gr17_population_iteration_temperature}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
+    \end{figure}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\subsection{Instancja 3 - \textit{gr120}}
+
+Średnie wartości są zbliżone do najlepszego rozwiązania dla najmniejszych wartości parametru krzyżowania. Wzrost tego parametru skutkuje zmniejszeniem średniej wyników w każdej populacji.
+
+\subsubsection{Zmiana parametru krzyżowania}
+  \begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.25}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.5}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.75}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-1}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru krzyżowania}
+    \end{figure}
+     
+     
+     \clearpage
+\subsubsection{Zmiana parametru liczby pokoleń}
+
+Wzrost parametru liczby pokoleń jest jednoznaczny ze wzrostem wartości najlepszego rozwiązania. Zmniejsza się również wartość średnia i mediana. 
+
+
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-50-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.8}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-150-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-200-cross-0.8}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru liczby pokoleń}
+    \end{figure}
+    
+    \clearpage
+\subsubsection{Zmiana parametru rozmiaru populacji}
+
+Wartość znajdowanego rozwiązania jest na stałym poziomie niezależnie od ilości osobników. Zmniejsza się jednak średnia wartość dla każdego pokolenia. 
+
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-100-iter-100-cross-0.8}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-150-iter-100-cross-0.8}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/learning-curve/gr120.tsp-pop-200-iter-100-cross-0.8}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru rozmiaru populacji}
+    \end{figure}
+    
+    \clearpage
+\subsubsection{Jednoczesna zmiana krzyżowania i mutacji oraz rozmiaru populacji i liczby pokoleń}
+
+
+Dla tej instancji nie znaleziono korelacji między jednoczesną zmianą wartości krzyżowania i mutacji a polepszeniem uzyskiwanego wyniku. 
+
+Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzyskano dla 150 osobników i 50 pokoleń.
+
+\begin{figure}[!h]
+    \centering
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/tsp/gr120_mutation_crossover_temperature}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/tsp/gr120_population_iteration_temperature}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
+    \end{figure}
+    
+    \clearpage
+    \section{HGA}
+    
+    
+    \clearpage
 \section{Wnioski}
 
 Implementacja własnych funkcji mutowania i krzyżowania jest  zadaniem nietrywialnym, ale możliwym do wykonania.  Jakoś wyników uzyskanych przy własnych implementacjach znacząco odbiega od domyślnych funkcji.

@@ -6,7 +6,7 @@ library(GA)
 library(globalOptTests)
 library(TSP)
 
-drill <- read_TSPLIB("~/Documents/gr17.tsp")
+drill <- read_TSPLIB("~/Documents/gr120.tsp")
 D <- as.matrix(drill)
 
 # given a tour, calculate the total distance
