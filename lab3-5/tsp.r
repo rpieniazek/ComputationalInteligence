@@ -6,35 +6,57 @@ library(GA)
 library(globalOptTests)
 library(TSP)
 
+#domyslne wartosci GA
 defaultPopSize = 50
 defaultIterationSize = 100
 defaultCrossover = 0.8
 defaultMutation = 0.1
-testInstances = 10
-path = "~/Desktop/ga.nosync/"
 
+#domyslne wartosci HGA
+defaultMethod <- "L-BFGS-B";
+defaultPoptim <- 0.05
+defaultPressel <- 0.5
+
+#badane parametry HGA
+methods = c("BFGS", "L-BFGS-B", "CG")
+poptims = seq(0.05, 1, 0.2)
+pressels = seq(0, 1, 0.25)
+
+#badane parametry GA
 populationSizes = seq(50, 250, by = 50)
 iterSizes = seq(50, 250, by = 50)
 crossoverSizes = seq(0, 1.0, by = 0.25)
 mutationSizes = seq(0, 1.0, by = 0.25)
 
-# given a tour, calculate the total distance
+#ilosc przebiegow
+testInstances = 20
+
+#sciezka zapisu
+path = "~/Desktop/ga.nosync/"
+
+# obliczenie całkowitej długości
 tourLength <- function(tour, distMatrix) {
   tour <- c(tour, tour[1])
   route <- embed(tour, 2)[, 2:1]
   sum(distMatrix[route])
 }
 
-# inverse of thetotal distance is the fitness
+# odwrotność całkowitej odległości 
 tpsFitness <- function(tour, ...) 1 / tourLength(tour, ...)
 
+#funkcja obliczajaca GA i zapisujaca wykresy
 calculateGA <- function(fileName, popSize, iterationSize, crossover, mutation) {
+  #wczytanie pliku *.tsp
   drill <- read_TSPLIB(sprintf("~/Documents/%s", fileName))
+  
+  #konwersja pliku do postaci macierzowej
   D <- as.matrix(drill)
+  
+  #przygotowanie macierzy wyjsciowej (do obliczania wartosci srednich)
   fitnessMat <- matrix(0, testInstances, 2)
   
+  #petla odpowiedzialna za ilosc przebiegow funkcji GA
   for (instanceIndex in seq(1, testInstances)) {
-    # run a GA algorithm
     GA.rep <-
       ga(
         type = "permutation",
@@ -51,18 +73,68 @@ calculateGA <- function(fileName, popSize, iterationSize, crossover, mutation) {
         monitor = FALSE
       )
     
+    #dodawanie rozwiazan do macierzy wynikowej
     fitnessMat[instanceIndex, 1] <- GA.rep@summary[GA.rep@iter]
     fitnessMat[instanceIndex, 2] <- GA.rep@summary[GA.rep@iter]
   }
   
-  name = sprintf("%s pop-%s iter-%s cross-%s", fileName, popSize, iterationSize, crossover, mutation)
+  #generowanie nazwy pliku/wykresu
+  name = sprintf("%s-pop-%s-iter-%s-cross-%s", fileName, popSize, iterationSize, crossover, mutation)
+  
+  #zapis wykresu
   jpeg(file = sprintf("%s%s.jpg", path, name))
+  
+  #generowane wykresu
   plot(GA.rep, main = name)
   points(rep(50, testInstances), fitnessMat[, 1], pch = 16, col = "lightgrey")
   points(rep(55, testInstances), fitnessMat[, 2], pch = 17, col = "lightblue")
   dev.off()
 }
 
+#funkcja obliczajaca HGA i zapisujaca wykresy
+calculateHGA <- function(fileName, method, poptim, pressel) {
+  drill <- read_TSPLIB(sprintf("~/Documents/%s", fileName))
+  D <- as.matrix(drill)
+  fitnessMat <- matrix(0, testInstances, 2)
+  
+  for (instanceIndex in seq(1, testInstances)) {
+    
+    optimArgs = list(method = method, 
+                     poptim = poptim,
+                     pressel = pressel,
+                     control = list(fnscale = -1, maxit = 100))
+    
+    # run a HGA algorithm
+    GA.rep <-
+      ga(
+        type = "permutation",
+        fitness = tpsFitness,
+        distMatrix = D,
+        min = 1,
+        max = nrow(D),
+        monitor = FALSE,
+        optimArgs = optimArgs
+      )
+    
+    fitnessMat[instanceIndex, 1] <- GA.rep@summary[GA.rep@iter]
+    fitnessMat[instanceIndex, 2] <- GA.rep@summary[GA.rep@iter]
+  }
+  
+  
+  #generowanie nazwy pliku/wykresu
+  name = sprintf("HGA-%s-method-%s-poptim-%s-pressel-%s", fileName, method, poptim, pressel)
+  
+  #zapis wykresu
+  jpeg(file = sprintf("%s%s.jpg", path, name))
+  
+  #generowane wykresu
+  plot(GA.rep, main = name)
+  points(rep(50, testInstances), fitnessMat[, 1], pch = 16, col = "lightgrey")
+  points(rep(55, testInstances), fitnessMat[, 2], pch = 17, col = "lightblue")
+  dev.off()
+}
+
+#funkcja uruchamiajace GA dla roznych parametrow
 invoke <- function(fileName) {
   
   #zmiana wartosci krzyzowania
@@ -99,6 +171,41 @@ invoke <- function(fileName) {
   }
 }
 
-invoke('bays29.tsp')
-invoke('gr17.tsp')
-invoke('gr120.tsp')
+#funkcja uruchamiajace HGA dla roznych parametrow
+invokeHGA <- function(fileName) {
+  #zmiana metod
+  for (method in methods) {
+    calculateHGA(
+      fileName,
+      method,
+      defaultPoptim,
+      defaultPressel
+    )
+  }
+  
+  #zmiana wartosci prawdopodobienstwa przeszukiwania lokalnego
+  for (poptim in poptims) {
+    calculateHGA(
+      fileName,
+      defaultMethod,
+      poptim,
+      defaultPressel
+    )
+  }
+  
+  #zmiana wartosci selective pressure
+  for (pressel in pressels) {
+    calculateHGA(
+      fileName,
+      defaultMethod,
+      defaultPoptim,
+      pressel
+    )
+  }
+}
+
+invokeHGA('bays29.tsp')
+#invoke('bays29.tsp')
+#invoke('gr17.tsp')
+#invoke('gr120.tsp')
+
