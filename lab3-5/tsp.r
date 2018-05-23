@@ -18,7 +18,6 @@ defaultPoptim <- 0.05
 defaultPressel <- 0.5
 
 #badane parametry HGA
-methods = c("BFGS", "L-BFGS-B", "CG")
 poptims = seq(0.05, 1, 0.2)
 pressels = seq(0, 1, 0.25)
 
@@ -29,7 +28,7 @@ crossoverSizes = seq(0, 1.0, by = 0.25)
 mutationSizes = seq(0, 1.0, by = 0.25)
 
 #ilosc przebiegow
-testInstances = 20
+testInstances = 10
 
 #sciezka zapisu
 path = "~/Desktop/ga.nosync/"
@@ -99,7 +98,7 @@ calculateHGA <- function(fileName, method, poptim, pressel) {
   
   for (instanceIndex in seq(1, testInstances)) {
     
-    optimArgs = list(method = method, 
+    optimArgs = list(method = defaultMethod, 
                      poptim = poptim,
                      pressel = pressel,
                      control = list(fnscale = -1, maxit = 100))
@@ -122,7 +121,7 @@ calculateHGA <- function(fileName, method, poptim, pressel) {
   
   
   #generowanie nazwy pliku/wykresu
-  name = sprintf("HGA-%s-method-%s-poptim-%s-pressel-%s", fileName, method, poptim, pressel)
+  name = sprintf("hga-%s-method-%s-poptim-%s-pressel-%s", fileName, method, poptim, pressel)
   
   #zapis wykresu
   jpeg(file = sprintf("%s%s.jpg", path, name))
@@ -173,15 +172,6 @@ invoke <- function(fileName) {
 
 #funkcja uruchamiajace HGA dla roznych parametrow
 invokeHGA <- function(fileName) {
-  #zmiana metod
-  for (method in methods) {
-    calculateHGA(
-      fileName,
-      method,
-      defaultPoptim,
-      defaultPressel
-    )
-  }
   
   #zmiana wartosci prawdopodobienstwa przeszukiwania lokalnego
   for (poptim in poptims) {

@@ -58,7 +58,7 @@
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushright} \large
 				\emph{Supervisor:} \\
-				prof. dr inż. Olgierd \textsc{Unold} 
+				dr hab. inż. Olgierd \textsc{Unold}, prof. PWr
 			\end{flushright}
 		\end{minipage}\\[4cm]
 
@@ -180,7 +180,7 @@ customMutation <- function(object, parent)
     \newpage 
    Zmiana funkcji mutującej nie wpłynęła znacząco na wyniki końcowy. Mimo, iż w początkowej fazie wynik funkcji zbiegał do ekstremum wolniej niż w przypadku funkcji domyślnej, po 100 pokoleniach wynik jest na podobnym poziomie w obu przypadkach. Finalnie jednak algorytm z własną funkcją mutującą nie znalazł ekstremum globalnego. Widoczne jest to na wykresie temperaturowym, na którym zaznaczono rozwiązanie znalezione przez algorytm.
    
- W przypadku funkcji z własną funkcją mutowania można zauważyć spadek średniej i mediany wyników.
+ W przypadku funkcji z własną funkcją mutowania można zauważyć spadek średniej i mediany wyników. Jest to spowodowane tym że dane zostają wyznaczane stochastycznie przez pakiet GA, a ich modyfikacja przez pomnożenie lub podzielenie przez stałą liczbę nie może poprawić ani pogorszyć wyniku w tym przypadku. Jakość znalezionych rozwiązań będzie mocno skorelowana z pierwotnie wyznaczonymi wartościami.
   
 
 \subsection{Zmiana funkcji krzyżowania}
@@ -233,7 +233,7 @@ customCrossover <- function(object, parents)
     \caption{Porównanie domyślnej funkcji krzyżowania z własną  - znalezione ekstrema}
     \end{figure}
 
-W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globalnego. Wartości średniej i mediany spadły znaczącą w stosunku do domyślnej implementacji. Mediana jest praktycznie równa zero. 
+W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globalnego. Wartości średniej i mediany spadły znaczącą w stosunku do domyślnej implementacji. Mediana jest praktycznie równa zero. Algorytm prawdopodobnie znalazł minimum lokalne i nie mógł odnaleźć lepszych rozwiązań, mimo wybierania lepszej wartości \textit{fitness}, ponieważ do każdego rodzica jest dodawana wartość losowa z przedziału [-1, 1]. Prawdopodobnie gdyby ten przedział był większy algorytm mógłby wylosować lepszego rodzica, który nie znajduje się w lokalnym minimum.
 
 \clearpage
 \section{Problem komiwojażera}
@@ -323,7 +323,7 @@ Wraz ze wzrostem ilości osobników w pokoleniu algorytm znajduje coraz lepsze r
   \clearpage
 \subsubsection{Jednoczesna zmiana krzyżowania i mutacji oraz rozmiaru populacji i liczby pokoleń}
 
-Algorytm uzyskał najlepszy wynik gdy populacja wynosiła 100, a ilość pokoleń 80. Analiza wykresu temperaturowego jednoczesnej zmiany mutowania i krzyżowania nie pozwala wysunąć jednoznacznych wniosków. Można wydzielić dwa obszary parametrów dla których algorytm znalazł lepsze rozwiązanie: krzyżowanie :0.6 i mutacja 0.4 oraz krzyżowanie :0.8 i mutacja 0.75
+Algorytm uzyskał najlepszy wynik gdy populacja wynosiła 100, a liczba pokoleń 80. Analiza wykresu temperaturowego jednoczesnej zmiany mutowania i krzyżowania nie pozwala wysunąć jednoznacznych wniosków. Można wydzielić dwa obszary parametrów dla których algorytm znalazł lepsze rozwiązanie: krzyżowanie 0.6 i mutacja 0.4 oraz krzyżowanie 0.8 i mutacja 0.75
 
 \begin{figure}[!h]
     \centering
@@ -421,20 +421,23 @@ Wartość znajdowanego rozwiązania jest na stałym poziomie niezależnie od ilo
     \clearpage
 \subsubsection{Jednoczesna zmiana krzyżowania i mutacji oraz rozmiaru populacji i liczby pokoleń}
 
-Dla tej instancji nie znaleziono korelacji między jednoczesną zmianą wartości krzyżowania i mutacji a polepszeniem uzyskiwanego wyniku. 
+Dla tej instancji nie znaleziono korelacji między jednoczesną zmianą wartości krzyżowania i mutacji a polepszeniem uzyskiwanego wyniku. Najlepszy wynik uzyskano dla wartości krzyżowania 0.8 i mutacji 0.1.
+
+\begin{figure}[!h]
+    \centering
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/tsp/gr17_mutation_crossover_temperature}}}\quad
+    }
+    \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
+    \end{figure}
 
 Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzyskano dla 100 osobników i 75 pokoleń.
 
 \begin{figure}[!h]
     \centering
-        \mbox{
-    \subfigure{
-     \includegraphics[width=3in]{{{inc/results/tsp/gr17_mutation_crossover_temperature}}}\quad
-    }
     \subfigure{
    \includegraphics[width=3in]{{{inc/results/tsp/gr17_population_iteration_temperature}}}\quad
   }
-    }
     \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
     \end{figure}
 
@@ -527,18 +530,22 @@ Wartość znajdowanego rozwiązania jest na stałym poziomie niezależnie od ilo
 
 Dla tej instancji nie znaleziono korelacji między jednoczesną zmianą wartości krzyżowania i mutacji a polepszeniem uzyskiwanego wyniku. 
 
+
+\begin{figure}[!h]
+    \centering
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/tsp/gr120_mutation_crossover_temperature}}}\quad
+    }
+    \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
+    \end{figure}
+
 Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzyskano dla 150 osobników i 50 pokoleń.
 
 \begin{figure}[!h]
     \centering
-        \mbox{
-    \subfigure{
-     \includegraphics[width=3in]{{{inc/results/tsp/gr120_mutation_crossover_temperature}}}\quad
-    }
     \subfigure{
    \includegraphics[width=3in]{{{inc/results/tsp/gr120_population_iteration_temperature}}}\quad
   }
-    }
     \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
     \end{figure}
     
@@ -549,7 +556,7 @@ Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzy
     \clearpage
 \section{Wnioski}
 
-Implementacja własnych funkcji mutowania i krzyżowania jest  zadaniem nietrywialnym, ale możliwym do wykonania.  Jakoś wyników uzyskanych przy własnych implementacjach znacząco odbiega od domyślnych funkcji.
+Implementacja własnych funkcji mutowania i krzyżowania jest  zadaniem nietrywialnym, ale możliwym do wykonania.  Jakość wyników uzyskanych przy własnych implementacjach znacząco odbiega od domyślnych funkcji.
 
 
 \section{Literatura}

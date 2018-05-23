@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.14)  22 MAY 2018 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 MAY 2018 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1096,13 +1096,15 @@ File: latin1.def 2015/03/17 v1.2c Input encoding file
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 202.
+ [7 <./inc/results/default_ga_result.jpg> <./inc/results/custom-mutation-result
+.jpg>]
 File: inc/results/default_ga.jpg Graphic file (type jpg)
 
 <use inc/results/default_ga.jpg>
 Package pdftex.def Info: inc/results/default_ga.jpg used on input line 220.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-<inc/results/custom-crossover.jpg, id=49, 481.8pt x 481.8pt>
+<inc/results/custom-crossover.jpg, id=53, 481.8pt x 481.8pt>
 File: inc/results/custom-crossover.jpg Graphic file (type jpg)
 
 <use inc/results/custom-crossover.jpg>
@@ -1114,16 +1116,13 @@ Overfull \hbox (43.49532pt too wide) in paragraph at lines 220--221
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: inc/results/default_ga_result.jpg Graphic file (type jpg)
 <use inc/results/default_ga_result.jpg>
 Package pdftex.def Info: inc/results/default_ga_result.jpg used on input line 2
 32.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-<inc/results/custom-crossover-result.jpg, id=50, 481.8pt x 481.8pt>
+<inc/results/custom-crossover-result.jpg, id=54, 481.8pt x 481.8pt>
 File: inc/results/custom-crossover-result.jpg Graphic file (type jpg)
 
 <use inc/results/custom-crossover-result.jpg>
@@ -1135,12 +1134,8 @@ Overfull \hbox (43.49532pt too wide) in paragraph at lines 232--233
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <./inc/results/default_ga_result.jpg> <./inc/results/custom-mutation-result.
-jpg>] [8 <./inc/results/custom-crossover.jpg> <./inc/results/custom-crossover-r
-esult.jpg>] [9
+[8 <./inc/results/custom-crossover.jpg> <./inc/results/custom-crossover-result.
+jpg>] [9
 
 ]
 <inc/results/learning-curve/bays29.tsp-pop-50-iter-100-cross-0.25.jpg, id=61, 4
@@ -1500,7 +1495,7 @@ File: inc/results/tsp/gr17_mutation_crossover_temperature.png Graphic file (typ
 e png)
  <use inc/results/tsp/gr17_mutation_crossover_temperature.png>
 Package pdftex.def Info: inc/results/tsp/gr17_mutation_crossover_temperature.pn
-g used on input line 437.
+g used on input line 430.
 (pdftex.def)             Requested size: 216.81pt x 131.36362pt.
 
 <inc/results/tsp/gr17_population_iteration_temperature.png, id=111, 881.2925pt 
@@ -1509,12 +1504,8 @@ File: inc/results/tsp/gr17_population_iteration_temperature.png Graphic file (t
 ype png)
  <use inc/results/tsp/gr17_population_iteration_temperature.png>
 Package pdftex.def Info: inc/results/tsp/gr17_population_iteration_temperature.
-png used on input line 437.
+png used on input line 440.
 (pdftex.def)             Requested size: 216.81pt x 131.36362pt.
-
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 437--438
- [][] 
- []
 
 [17
 
@@ -1527,7 +1518,7 @@ ic file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.25.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-100-c
-ross-0.25.jpg used on input line 458.
+ross-0.25.jpg used on input line 461.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.5.jpg, id=118, 48
@@ -1537,7 +1528,7 @@ c file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.5.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-100-c
-ross-0.5.jpg used on input line 458.
+ross-0.5.jpg used on input line 461.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.75.jpg, id=119, 4
@@ -1547,7 +1538,7 @@ ic file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.75.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-100-c
-ross-0.75.jpg used on input line 466.
+ross-0.75.jpg used on input line 469.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-1.jpg, id=120, 481.
@@ -1557,15 +1548,15 @@ file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-1.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-100-c
-ross-1.jpg used on input line 466.
+ross-1.jpg used on input line 469.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 458--467
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 461--470
  [][] 
  []
 
 
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 458--467
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 461--470
  [] 
  []
 
@@ -1582,7 +1573,7 @@ File: inc/results/learning-curve/gr120.tsp-pop-50-iter-50-cross-0.8.jpg Graphic
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-50-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-50-cr
-oss-0.8.jpg used on input line 486.
+oss-0.8.jpg used on input line 489.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.8.jpg, id=126, 48
@@ -1592,7 +1583,7 @@ c file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-100-c
-ross-0.8.jpg used on input line 486.
+ross-0.8.jpg used on input line 489.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-50-iter-150-cross-0.8.jpg, id=127, 48
@@ -1602,7 +1593,7 @@ c file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-150-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-150-c
-ross-0.8.jpg used on input line 494.
+ross-0.8.jpg used on input line 497.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-50-iter-200-cross-0.8.jpg, id=128, 48
@@ -1612,15 +1603,15 @@ c file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-200-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-200-c
-ross-0.8.jpg used on input line 494.
+ross-0.8.jpg used on input line 497.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 486--495
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 489--498
  [][] 
  []
 
 
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 486--495
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 489--498
  [] 
  []
 
@@ -1635,7 +1626,7 @@ c file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-50-iter-100-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-50-iter-100-c
-ross-0.8.jpg used on input line 512.
+ross-0.8.jpg used on input line 515.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-100-iter-100-cross-0.8.jpg, id=132, 4
@@ -1645,7 +1636,7 @@ ic file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-100-iter-100-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-100-iter-100-
-cross-0.8.jpg used on input line 512.
+cross-0.8.jpg used on input line 515.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-150-iter-100-cross-0.8.jpg, id=133, 4
@@ -1655,7 +1646,7 @@ ic file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-150-iter-100-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-150-iter-100-
-cross-0.8.jpg used on input line 520.
+cross-0.8.jpg used on input line 523.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
 <inc/results/learning-curve/gr120.tsp-pop-200-iter-100-cross-0.8.jpg, id=134, 4
@@ -1665,15 +1656,15 @@ ic file (type jpg)
 
 <use inc/results/learning-curve/gr120.tsp-pop-200-iter-100-cross-0.8.jpg>
 Package pdftex.def Info: inc/results/learning-curve/gr120.tsp-pop-200-iter-100-
-cross-0.8.jpg used on input line 520.
+cross-0.8.jpg used on input line 523.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 512--521
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 515--524
  [][] 
  []
 
 
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 512--521
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 515--524
  [] 
  []
 
@@ -1688,7 +1679,7 @@ File: inc/results/tsp/gr120_mutation_crossover_temperature.png Graphic file (ty
 pe png)
  <use inc/results/tsp/gr120_mutation_crossover_temperature.png>
 Package pdftex.def Info: inc/results/tsp/gr120_mutation_crossover_temperature.p
-ng used on input line 541.
+ng used on input line 538.
 (pdftex.def)             Requested size: 216.81pt x 131.36362pt.
 
 <inc/results/tsp/gr120_population_iteration_temperature.png, id=139, 881.2925pt
@@ -1697,12 +1688,8 @@ File: inc/results/tsp/gr120_population_iteration_temperature.png Graphic file (
 type png)
  <use inc/results/tsp/gr120_population_iteration_temperature.png>
 Package pdftex.def Info: inc/results/tsp/gr120_population_iteration_temperature
-.png used on input line 541.
+.png used on input line 548.
 (pdftex.def)             Requested size: 216.81pt x 131.36362pt.
-
-Overfull \hbox (43.49532pt too wide) in paragraph at lines 541--542
- [][] 
- []
 
 [21
 
@@ -1710,13 +1697,13 @@ Overfull \hbox (43.49532pt too wide) in paragraph at lines 541--542
 p/gr120_population_iteration_temperature.png>] [22
 
 ]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 557
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 564
 .
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Overfull \hbox (13.70726pt too wide) in paragraph at lines 563--565
+Overfull \hbox (13.70726pt too wide) in paragraph at lines 570--572
 []\OT4/cmr/m/n/10 Katharine Mul-len, "Pac-ka-ge 'glo-ba-lOpt-Te-sts'", $\OT4/cm
 tt/m/n/10 https : / / cran . r-[]project . org / web / packages /
  []
@@ -1731,7 +1718,7 @@ Package logreq Info: Writing requests to 'sprawozdanie.run.xml'.
 Here is how much of TeX's memory you used:
  12356 strings out of 492995
  204508 string characters out of 6132704
- 629987 words of memory out of 5000000
+ 627987 words of memory out of 5000000
  15672 multiletter control sequences out of 15000+600000
  18818 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1755,7 +1742,7 @@ r9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie.pdf (24 pages, 2348822 bytes).
+Output written on sprawozdanie.pdf (24 pages, 2351643 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  108 compressed objects within 2 object streams
