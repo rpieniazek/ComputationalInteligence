@@ -60,8 +60,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.4.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}HGA}{22}
+\contentsline {section}{\numberline {5}hybrydowy algorytm genetyczny}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Wnioski}{23}
+\contentsline {subsection}{\numberline {5.1}Zmiana parametru metody}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Literatura}{23}
+\contentsline {subsection}{\numberline {5.2}Zmiana parametru prawdopodobie\IeC {\'n}stwa}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Zmiana parametru nacisku}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Wnioski}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Literatura}{25}

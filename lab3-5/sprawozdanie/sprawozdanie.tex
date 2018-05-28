@@ -549,8 +549,79 @@ Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzy
     \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
     \end{figure}
     
+       \clearpage
+    \section{hybrydowy algorytm genetyczny}
+    	
+    \subsection{Zmiana parametru metody}
+    
+
+
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-05-pressel-0-5}
+  \caption{Metoda BFGS}\label{fig:BFGS}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-pressel-0-5}
+  \caption{Metoda CG}\label{fig:CG}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-5}
+  \caption{Metoda L}\label{fig:L}
+\endminipage
+\end{figure}
+
+
     \clearpage
-    \section{HGA}
+	\subsection{Zmiana parametru prawdopodobieństwa}
+
+
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru prawdopodobieństwa }
+    \end{figure}
+    
+    \clearpage
+ 	 \subsection{Zmiana parametru nacisku}
+ 	 
+
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-25}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-75}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-1}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany  parametru nacisku}
+    \end{figure}
+    
     
     
     \clearpage

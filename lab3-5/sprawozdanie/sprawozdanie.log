@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 MAY 2018 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.14)  28 MAY 2018 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1694,32 +1694,185 @@ Package pdftex.def Info: inc/results/tsp/gr120_population_iteration_temperature
 [21
 
  <./inc/results/tsp/gr120_mutation_crossover_temperature.png> <./inc/results/ts
-p/gr120_population_iteration_temperature.png>] [22
+p/gr120_population_iteration_temperature.png>]
+<inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-05-pressel-0-5.jpg, id=14
+5, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-05-pressel-0-5.jpg G
+raphic file (type jpg)
 
-]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 564
-.
+<use inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-05-pressel-0-5.jpg>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-0
+5-pressel-0-5.jpg used on input line 561.
+(pdftex.def)             Requested size: 136.57635pt x 136.5719pt.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/polski/ot4cmtt.fd
-File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-)
-Overfull \hbox (13.70726pt too wide) in paragraph at lines 570--572
-[]\OT4/cmr/m/n/10 Katharine Mul-len, "Pac-ka-ge 'glo-ba-lOpt-Te-sts'", $\OT4/cm
-tt/m/n/10 https : / / cran . r-[]project . org / web / packages /
+<inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-pressel-0-5.jpg, id=146,
+ 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-pressel-0-5.jpg Gra
+phic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-pressel-0-5.jpg>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-
+pressel-0-5.jpg used on input line 565.
+(pdftex.def)             Requested size: 136.57635pt x 136.5719pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-5.jpg, i
+d=147, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-5.j
+pg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-5.jp
+g>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-05-pressel-0-5.jpg used on input line 569.
+(pdftex.def)             Requested size: 136.57635pt x 136.5719pt.
+ [22
+
+ <./inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-05-pressel-0-5.jpg> <.
+/inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-pressel-0-5.jpg> <./inc/
+results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-5.jpg>]
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5.jpg, i
+d=151, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5.j
+pg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5.jp
+g>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-25-pressel-0-5.jpg used on input line 588.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5.jpg, i
+d=152, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5.j
+pg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5.jp
+g>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-45-pressel-0-5.jpg used on input line 588.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5.jpg, i
+d=153, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5.j
+pg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5.jp
+g>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-65-pressel-0-5.jpg used on input line 596.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5.jpg, i
+d=154, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5.j
+pg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5.jp
+g>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-85-pressel-0-5.jpg used on input line 596.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 588--597
+ [][] 
+ []
+
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 588--597
+ [] 
  []
 
 [23
 
+ <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5.jpg
+> <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5.jp
+g> <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5.j
+pg> <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5.
+jpg>]
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0.jpg, id=
+158, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0.jpg
+ Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0.jpg>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-05-pressel-0.jpg used on input line 613.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-25.jpg, 
+id=159, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-25.
+jpg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-25.j
+pg>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-05-pressel-0-25.jpg used on input line 613.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-75.jpg, 
+id=160, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-75.
+jpg Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-75.j
+pg>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-05-pressel-0-75.jpg used on input line 621.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+<inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-1.jpg, id=
+161, 481.8pt x 481.8pt>
+File: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-1.jpg
+ Graphic file (type jpg)
+
+<use inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-1.jpg>
+Package pdftex.def Info: inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim
+-0-05-pressel-1.jpg used on input line 621.
+(pdftex.def)             Requested size: 216.81pt x 216.80798pt.
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 613--622
+ [][] 
+ []
+
+
+Overfull \hbox (43.49532pt too wide) in paragraph at lines 613--622
+ [] 
+ []
+
+[24
+
+ <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0.jpg> 
+<./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-25.jpg
+> <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-75.j
+pg> <./inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-1.jp
+g>]
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 635
+.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/polski/ot4cmtt.fd
+File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+Overfull \hbox (13.70726pt too wide) in paragraph at lines 641--643
+[]\OT4/cmr/m/n/10 Katharine Mul-len, "Pac-ka-ge 'glo-ba-lOpt-Te-sts'", $\OT4/cm
+tt/m/n/10 https : / / cran . r-[]project . org / web / packages /
+ []
+
+[25
+
 ] (./sprawozdanie.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'sprawozdanie.run.xml'.
 \openout1 = `sprawozdanie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12356 strings out of 492995
- 204508 string characters out of 6132704
+ 12415 strings out of 492995
+ 208637 string characters out of 6132704
  627987 words of memory out of 5000000
- 15672 multiletter control sequences out of 15000+600000
+ 15719 multiletter control sequences out of 15000+600000
  18818 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,40p,1137b,2304s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1742,10 +1895,10 @@ r9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie.pdf (24 pages, 2351643 bytes).
+Output written on sprawozdanie.pdf (26 pages, 2820413 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 227 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
