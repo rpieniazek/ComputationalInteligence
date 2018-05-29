@@ -182,7 +182,7 @@ customMutation <- function(object, parent)
    
  W przypadku funkcji z własną funkcją mutowania można zauważyć spadek średniej i mediany wyników. Jest to spowodowane tym że dane zostają wyznaczane stochastycznie przez pakiet GA, a ich modyfikacja przez pomnożenie lub podzielenie przez stałą liczbę nie może poprawić ani pogorszyć wyniku w tym przypadku. Jakość znalezionych rozwiązań będzie mocno skorelowana z pierwotnie wyznaczonymi wartościami.
   
-
+\clearpage
 \subsection{Zmiana funkcji krzyżowania}
 Poniżej przedstawiono własną propozycję implementacji funkcji krzyżowania.
 
@@ -234,7 +234,6 @@ customCrossover <- function(object, parents)
     \end{figure}
 
 W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globalnego. Wartości średniej i mediany spadły znaczącą w stosunku do domyślnej implementacji. Mediana jest praktycznie równa zero. Algorytm prawdopodobnie znalazł minimum lokalne i nie mógł odnaleźć lepszych rozwiązań, mimo wybierania lepszej wartości \textit{fitness}, ponieważ do każdego rodzica jest dodawana wartość losowa z przedziału [-1, 1]. Prawdopodobnie gdyby ten przedział był większy algorytm mógłby wylosować lepszego rodzica, który nie znajduje się w lokalnym minimum.
-
 
 \clearpage
 \section{Problem komiwojażera}
@@ -576,7 +575,7 @@ Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzy
   }
     \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
     \end{figure}
-        
+        \newpage
     \subsection{Wnioski}
     \subsubsection{Zmiana parametru populacji}
 Zwiększenie rozmiaru populacji daje większą szansę znalezienia optymalnego rozwiązania po przez zagęszczenie przeszukiwań na danej powierzchni. 
@@ -679,7 +678,5 @@ basicstyle=\small
 
 \lstinputlisting{inc/main.r}
 \lstinputlisting{inc/tsp.r}
-\lstinputlisting{inc/tsp_temp_co_mut.r}
-\lstinputlisting{inc/tsp_temp_size_iter.r}
 
 \end{document}\documentclass{article}

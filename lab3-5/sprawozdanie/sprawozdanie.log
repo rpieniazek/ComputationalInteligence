@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 MAY 2018 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.14)  29 MAY 2018 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,21 +1090,20 @@ Overfull \hbox (43.49532pt too wide) in paragraph at lines 176--177
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./inc/results/default_ga.jpg> <./inc/results/custom-mutation.jpg>]
+[6 <./inc/results/default_ga.jpg> <./inc/results/custom-mutation.jpg>] [7 <./in
+c/results/default_ga_result.jpg> <./inc/results/custom-mutation-result.jpg>]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 202.
- [7 <./inc/results/default_ga_result.jpg> <./inc/results/custom-mutation-result
-.jpg>]
 File: inc/results/default_ga.jpg Graphic file (type jpg)
 
 <use inc/results/default_ga.jpg>
 Package pdftex.def Info: inc/results/default_ga.jpg used on input line 220.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-<inc/results/custom-crossover.jpg, id=53, 481.8pt x 481.8pt>
+<inc/results/custom-crossover.jpg, id=52, 481.8pt x 481.8pt>
 File: inc/results/custom-crossover.jpg Graphic file (type jpg)
 
 <use inc/results/custom-crossover.jpg>
@@ -1122,7 +1121,7 @@ Package pdftex.def Info: inc/results/default_ga_result.jpg used on input line 2
 32.
 (pdftex.def)             Requested size: 216.81pt x 216.80798pt.
 
-<inc/results/custom-crossover-result.jpg, id=54, 481.8pt x 481.8pt>
+<inc/results/custom-crossover-result.jpg, id=53, 481.8pt x 481.8pt>
 File: inc/results/custom-crossover-result.jpg Graphic file (type jpg)
 
 <use inc/results/custom-crossover-result.jpg>
@@ -1134,8 +1133,13 @@ Overfull \hbox (43.49532pt too wide) in paragraph at lines 232--233
  [][] 
  []
 
-[8 <./inc/results/custom-crossover.jpg> <./inc/results/custom-crossover-result.
-jpg>] [9] <inc/default/bays29.jpg, id=61, 481.8pt x 481.8pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8
+
+ <./inc/results/custom-crossover.jpg>] [9 <./inc/results/custom-crossover-resul
+t.jpg>] <inc/default/bays29.jpg, id=61, 481.8pt x 481.8pt>
 File: inc/default/bays29.jpg Graphic file (type jpg)
 
 <use inc/default/bays29.jpg>
@@ -1882,37 +1886,31 @@ Overfull \hbox (6.11008pt too wide) in paragraph at lines 143--144
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[35]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2015/03/17 v1.2c Input encoding file
-)
-(./inc/tsp_temp_co_mut.r
-Overfull \hbox (6.11008pt too wide) in paragraph at lines 37--38
+
+Overfull \hbox (17.21011pt too wide) in paragraph at lines 163--164
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[36]
-Overfull \hbox (22.76013pt too wide) in paragraph at lines 38--39
+
+Overfull \hbox (33.86017pt too wide) in paragraph at lines 164--165
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2015/03/17 v1.2c Input encoding file
-)
-(./inc/tsp_temp_size_iter.r [37]
-Overfull \hbox (6.11008pt too wide) in paragraph at lines 39--40
+[35]
+Overfull \hbox (17.21011pt too wide) in paragraph at lines 196--197
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [38] (./sprawozdanie.aux)
+[36]) [37] (./sprawozdanie.aux)
 Package logreq Info: Writing requests to 'sprawozdanie.run.xml'.
 \openout1 = `sprawozdanie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12556 strings out of 492995
- 210177 string characters out of 6132704
- 649987 words of memory out of 5000000
- 15836 multiletter control sequences out of 15000+600000
+ 12548 strings out of 492995
+ 209868 string characters out of 6132704
+ 650987 words of memory out of 5000000
+ 15838 multiletter control sequences out of 15000+600000
  19353 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,40p,1137b,2304s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1936,10 +1934,10 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/pl/plti9.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie.pdf (39 pages, 2898714 bytes).
+Output written on sprawozdanie.pdf (38 pages, 2893698 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
+ 271 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

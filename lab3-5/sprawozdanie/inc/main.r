@@ -1,4 +1,3 @@
-#https://cran.r-project.org/web/packages/GA/vignettes/GA.html
 #install.packages("GA");# do instalacji biblioteki GA
 #install.packages("globalOptTests")
 library(GA)
@@ -7,7 +6,7 @@ library(globalOptTests)
 #miejsce zapisu wykresow
 path = '/Users/evelan/Desktop/ga.nosync/'
 
-#uzyte funkcji
+#uzyta funkcja
 fnNames = c("Schubert")
 
 # liczba przebiegow

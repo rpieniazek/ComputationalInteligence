@@ -24,7 +24,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Zmiana funkcji mutowania}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Zmiana funkcji krzy\IeC {\.z}owania}{7}
+\contentsline {subsection}{\numberline {3.3}Zmiana funkcji krzy\IeC {\.z}owania}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Problem komiwoja\IeC {\.z}era}{10}
 \defcounter {refsection}{0}\relax 
@@ -60,13 +60,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.4.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Wnioski}{23}
+\contentsline {subsection}{\numberline {4.5}Wnioski}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.1}Zmiana parametru populacji}{23}
+\contentsline {subsubsection}{\numberline {4.5.1}Zmiana parametru populacji}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.2}Zmiana parametru krzy\IeC {\.z}owania}{23}
+\contentsline {subsubsection}{\numberline {4.5.2}Zmiana parametru krzy\IeC {\.z}owania}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.3}Zmiana warto\IeC {\'s}ci liczby pokole\IeC {\'n}}{23}
+\contentsline {subsubsection}{\numberline {4.5.3}Zmiana warto\IeC {\'s}ci liczby pokole\IeC {\'n}}{24}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.5.4}Jednoczesna zmiana warto\IeC {\'s}ci krzy\IeC {\.z}owania i mutacji}{24}
 \defcounter {refsection}{0}\relax 

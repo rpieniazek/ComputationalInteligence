@@ -144,6 +144,73 @@ calculateHGA <- function(fileName, method, poptim, pressel) {
   dev.off()
 }
 
+#funkcja badajaca jednoczesna zmiana krzyzowania i mutacji
+invokeCrossoverMutation <- function(){
+  ## crossover/mutation
+  crossoverSizes = seq(0, 1.0, by = 0.1) 
+  mutationSizes = seq(0, 1.0, by = 0.1)
+  crossoverSizesLength <- length(crossoverSizes)
+  mutationSizesLength <- length(mutationSizes)
+
+  tempMat <- matrix(0, crossoverSizesLength, mutationSizesLength)
+
+  for(crossover in seq(1,crossoverSizesLength )){
+    for(mutation in seq(1,mutationSizesLength )){
+      B <- 10
+      fitnessMat <- matrix(0, B, 2)
+      for (b in seq(1, B)) {
+        # run a GA algorithm
+        GA.rep <- ga(type = "permutation", fitness = tpsFitness, distMatrix = D, 
+                     min = 1, max = nrow(D), popSize = 10, maxiter = 50, run = 100, 
+                     keepBest=TRUE,
+                     pmutation = mutationSizes[mutation],
+                     pcrossover = crossoverSizes[crossover],
+                     monitor = NULL)
+        
+        fitnessMat[b, 1] <- GA.rep@summary[GA.rep@iter]
+        fitnessMat[b, 2] <- GA.rep@summary[GA.rep@iter]
+      }
+      
+      tempMat[crossover,mutation] <- GA.rep@fitnessValue
+    }
+  }
+}
+
+
+#funckja badajaca jednoczesna zmiane liczby populacji i pokolen
+invokePopulationIteration <- function(){
+  populationSizes = seq(50, 250, by = 50)
+  iterationSizes = seq(10, 100, by = 20)
+
+  populationSizesLength <- length(populationSizes)
+  iterationSizesLength <- length(iterationSizes)
+
+  tempMat <- matrix(0, populationSizesLength, iterationSizesLength)
+
+  for(population in seq(1,populationSizesLength )){
+    for(iteration in seq(1,iterationSizesLength )){
+      B <- 10
+      fitnessMat <- matrix(0, B, 2)
+      for (b in seq(1, B)) {
+        # run a GA algorithm
+        GA.rep <- ga(type = "permutation", fitness = tpsFitness, distMatrix = D, 
+                     min = 1, max = nrow(D), run = 100, 
+                     keepBest=TRUE,
+                     popSize = populationSizes[population],
+                     maxiter = iterationSizes[iteration],
+                     monitor = NULL)
+        
+        fitnessMat[b, 1] <- GA.rep@summary[GA.rep@iter]
+        fitnessMat[b, 2] <- GA.rep@summary[GA.rep@iter]
+      }
+      
+      tempMat[population,iteration] <- GA.rep@fitnessValue
+    }
+  }
+}
+
+
+}
 #funkcja uruchamiajace GA dla roznych parametrow
 invoke <- function(fileName) {
   
@@ -205,6 +272,8 @@ invokeHGA <- function(fileName) {
   }
 }
 
+#invokePopulationIteration()
+#invokeCrossoverMutation()
 invokeHGA('bays29.tsp')
 invoke('bays29.tsp')
 invoke('gr17.tsp')
