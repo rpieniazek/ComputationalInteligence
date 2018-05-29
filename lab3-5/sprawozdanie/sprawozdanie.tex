@@ -161,7 +161,7 @@ customMutation <- function(object, parent)
     \includegraphics[width=3in]{{{inc/results/custom-mutation}}}\quad
     }
     }
-    \caption{Porównanie domyślnej funkcji mutowania z własną}
+    \caption{Porównanie domyślnej funkcji (lewa strona) mutowania z własną (prawa strona)}
     \end{figure}
     
      \begin{figure}[!h]
@@ -174,11 +174,11 @@ customMutation <- function(object, parent)
     \includegraphics[width=3in]{{{inc/results/custom-mutation-result}}}\quad
     }
     }
-    \caption{Porównanie domyślnej funkcji mutowania z własną - znalezione ekstrema}
+    \caption{Porównanie domyślnej funkcji mutowania (lewa strona) z własną (prawa strona) - znalezione ekstrema}
     \end{figure}
     
     \newpage 
-   Zmiana funkcji mutującej nie wpłynęła znacząco na wyniki końcowy. Mimo, iż w początkowej fazie wynik funkcji zbiegał do ekstremum wolniej niż w przypadku funkcji domyślnej, po 100 pokoleniach wynik jest na podobnym poziomie w obu przypadkach. Finalnie jednak algorytm z własną funkcją mutującą nie znalazł ekstremum globalnego. Widoczne jest to na wykresie temperaturowym, na którym zaznaczono rozwiązanie znalezione przez algorytm.
+   Zmiana funkcji mutującej nie wpłynęła znacząco na wyniki końcowe. Mimo, iż w początkowej fazie wynik funkcji zbiegał do ekstremum wolniej niż w przypadku funkcji domyślnej, po 100 pokoleniach wynik jest na podobnym poziomie w obu przypadkach. Finalnie jednak algorytm z własną funkcją mutującą nie znalazł ekstremum globalnego. Widoczne jest to na wykresie temperaturowym, na którym zaznaczono rozwiązanie znalezione przez algorytm.
    
  W przypadku funkcji z własną funkcją mutowania można zauważyć spadek średniej i mediany wyników. Jest to spowodowane tym że dane zostają wyznaczane stochastycznie przez pakiet GA, a ich modyfikacja przez pomnożenie lub podzielenie przez stałą liczbę nie może poprawić ani pogorszyć wyniku w tym przypadku. Jakość znalezionych rozwiązań będzie mocno skorelowana z pierwotnie wyznaczonymi wartościami.
   
@@ -218,7 +218,7 @@ customCrossover <- function(object, parents)
     \includegraphics[width=3in]{{{inc/results/custom-crossover}}}\quad
     }
     }
-    \caption{Porównanie domyślnej funkcji krzyżowania z własną}
+    \caption{Porównanie domyślnej funkcji krzyżowania (lewa strona) z własną (prawa strona)}
     \end{figure}
      \begin{figure}[!h]
     \centering
@@ -230,7 +230,7 @@ customCrossover <- function(object, parents)
     \includegraphics[width=3in]{{{inc/results/custom-crossover-result}}}\quad
     }
     }
-    \caption{Porównanie domyślnej funkcji krzyżowania z własną  - znalezione ekstrema}
+    \caption{Porównanie domyślnej funkcji krzyżowania (lewa strona) z własną (prawa strona) - znalezione ekstrema}
     \end{figure}
 
 W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globalnego. Wartości średniej i mediany spadły znaczącą w stosunku do domyślnej implementacji. Mediana jest praktycznie równa zero. Algorytm prawdopodobnie znalazł minimum lokalne i nie mógł odnaleźć lepszych rozwiązań, mimo wybierania lepszej wartości \textit{fitness}, ponieważ do każdego rodzica jest dodawana wartość losowa z przedziału [-1, 1]. Prawdopodobnie gdyby ten przedział był większy algorytm mógłby wylosować lepszego rodzica, który nie znajduje się w lokalnym minimum.
@@ -242,7 +242,6 @@ W przypadku własnej funkcji krzyżującej algorytm nie znalazł ekstremum globa
 Problem komiwojażera jest jednym z najsłynniejszych problemów informatyki i badań operacyjnych. Często nazywa się skrótem TSP, skrót nazwy angielskiej nazwy "podróżujący sprzedawca". Można go sformułować w następujący sposób:
 "Biorąc pod uwagę n miast wraz z odległością między każdą parą tych miast, znajdź najkrótszą trasę, która przebiega przez każde miasto dokładnie raz."
 
-\clearpage
 \subsection{Instancja 1 - \textit{bays29}}
 
   \begin{figure}[!htbp]
@@ -349,7 +348,7 @@ Algorytm uzyskał najlepszy wynik gdy populacja wynosiła 100, a liczba pokoleń
     \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+
 \subsection{Instancja 2 - \textit{gr17}}
 
 
@@ -651,13 +650,8 @@ Wyniki pokazują że w każdym przypadku liczba iteracji miała większy wpływ 
 
 W implementacji dostępnej w pakiecie GA, wyszukiwanie lokalne jest stosowane stochastycznie podczas iteracji GA z prawdopodobieństwem \textit{poptim}  od 0 do 1. Tendencje wykresów zmiany wykresów parametru \textit{pressel} są analogiczne do zmian parametru \textit{poptim}. Większe wartości parametru \textit{poptim} algorytm szybciej znajduje rozwiązania optymalne.
         
-    
-    \clearpage
-\section{Wnioski}
 
-Implementacja własnych funkcji mutowania i krzyżowania jest  zadaniem nietrywialnym, ale możliwym do wykonania.  Jakość wyników uzyskanych przy własnych implementacjach znacząco odbiega od domyślnych funkcji.
-
-
+\newpage
 
 \section{Literatura}
 \begin{enumerate}
