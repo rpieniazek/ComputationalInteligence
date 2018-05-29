@@ -5,6 +5,8 @@
 library(GA)
 library(globalOptTests)
 library(TSP)
+library(igraph)
+
 
 #domyslne wartosci GA
 defaultPopSize = 50
@@ -28,7 +30,7 @@ crossoverSizes = seq(0, 1.0, by = 0.25)
 mutationSizes = seq(0, 1.0, by = 0.25)
 
 #ilosc przebiegow
-testInstances = 10
+testInstances = 1
 
 #sciezka zapisu
 path = "~/Desktop/ga.nosync/"
@@ -53,6 +55,12 @@ calculateGA <- function(fileName, popSize, iterationSize, crossover, mutation) {
   
   #przygotowanie macierzy wyjsciowej (do obliczania wartosci srednich)
   fitnessMat <- matrix(0, testInstances, 2)
+  
+  # 2-d coordinates
+  mds <- cmdscale(D)
+  x <- mds[, 1]
+  y <- -mds[, 2]
+  n <- length(x)
   
   #petla odpowiedzialna za ilosc przebiegow funkcji GA
   for (instanceIndex in seq(1, testInstances)) {
@@ -82,6 +90,7 @@ calculateGA <- function(fileName, popSize, iterationSize, crossover, mutation) {
   
   #zapis wykresu
   jpeg(file = sprintf("%s%s.jpg", path, name))
+  plotName = sprintf("%s%s.jpg", path, fileName)
   
   #generowane wykresu
   plot(GA.rep, main = name)
@@ -95,6 +104,8 @@ calculateHGA <- function(fileName, method, poptim, pressel) {
   drill <- read_TSPLIB(sprintf("~/Documents/%s", fileName))
   D <- as.matrix(drill)
   fitnessMat <- matrix(0, testInstances, 2)
+  
+  
   
   for (instanceIndex in seq(1, testInstances)) {
     
@@ -195,7 +206,7 @@ invokeHGA <- function(fileName) {
 }
 
 invokeHGA('bays29.tsp')
-#invoke('bays29.tsp')
-#invoke('gr17.tsp')
-#invoke('gr120.tsp')
+invoke('bays29.tsp')
+invoke('gr17.tsp')
+invoke('gr120.tsp')
 

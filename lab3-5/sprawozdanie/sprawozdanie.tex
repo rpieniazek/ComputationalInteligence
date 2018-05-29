@@ -245,8 +245,18 @@ Problem komiwojażera jest jednym z najsłynniejszych problemów informatyki i b
 \clearpage
 \subsection{Instancja 1 - \textit{bays29}}
 
+  \begin{figure}[!htbp]
+    \centering
+     \includegraphics[width=3in]{{{inc/default/bays29}}}
+
+    \caption{Rozwiązanie dla domyślnych parametrów}
+    \end{figure}
+    \newpage
 \subsubsection{Zmiana parametru krzyżowania}
 Zwiększanie parametru krzyżowania zmniejsza wartość średniej i mediany, oznacza to, że średnie wyniki w populacji są coraz gorsze. Algorytm znalazł najlepsze rozwiązanie dla wartości parametru 0.5. 
+
+
+
 
   \begin{figure}[!htbp]
     \centering
@@ -272,7 +282,7 @@ Zwiększanie parametru krzyżowania zmniejsza wartość średniej i mediany, ozn
     \clearpage
 \subsubsection{Zmiana parametru liczby pokoleń}
 
-Zwiększanie parametru liczby pokoleń zwiększa wartość znajdowanego rozwiązania. Poziom wartości średniej i mediany są bliskie najlepszemu rozwiązaniu.
+Zwiększanie parametru liczby pokoleń zwiększa wartość znajdowanego rozwiązania. Poziom wartości średniej i mediany są bliskie najlepszemu rozwiązaniu. 
 
 \begin{figure}[!htbp]
     \centering
@@ -341,8 +351,19 @@ Algorytm uzyskał najlepszy wynik gdy populacja wynosiła 100, a liczba pokoleń
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \subsection{Instancja 2 - \textit{gr17}}
-Średnie wartości są zbliżone do najlepszego rozwiązania dla najmniejszych wartości parametru krzyżowania. Wzrost tego parametru skutkuje zmniejszeniem średniej wyników w każdej populacji.
+
+
+  \begin{figure}[!htbp]
+    \centering
+     \includegraphics[width=3in]{{{inc/default/gr17}}}
+
+    \caption{Rozwiązanie dla domyślnych parametrów}
+    \end{figure}
+    
+
+\newpage
 \subsubsection{Zmiana parametru krzyżowania}
+Średnie wartości są zbliżone do najlepszego rozwiązania dla najmniejszych wartości parametru krzyżowania. Wzrost tego parametru skutkuje zmniejszeniem średniej wyników w każdej populacji.
   \begin{figure}[!h]
     \centering
     \mbox{
@@ -445,10 +466,17 @@ Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzy
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \subsection{Instancja 3 - \textit{gr120}}
+  \begin{figure}[!htbp]
+    \centering
+     \includegraphics[width=3in]{{{inc/default/gr120}}}
 
-Średnie wartości są zbliżone do najlepszego rozwiązania dla najmniejszych wartości parametru krzyżowania. Wzrost tego parametru skutkuje zmniejszeniem średniej wyników w każdej populacji.
+    \caption{Rozwiązanie dla domyślnych parametrów}
+    \end{figure}
+    
 
+\newpage
 \subsubsection{Zmiana parametru krzyżowania}
+Średnie wartości są zbliżone do najlepszego rozwiązania dla najmniejszych wartości parametru krzyżowania. Wzrost tego parametru skutkuje zmniejszeniem średniej wyników w każdej populacji.
   \begin{figure}[!h]
     \centering
     \mbox{
@@ -548,57 +576,28 @@ Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzy
   }
     \caption{Porównanie wyników podczas jednoczesnej zmiany parametrów}
     \end{figure}
-    
+        
+    \subsection{Wnioski}
+    \subsubsection{Zmiana parametru populacji}
+Zwiększenie rozmiaru populacji daje większą szansę znalezienia optymalnego rozwiązania po przez zagęszczenie przeszukiwań na danej powierzchni. 
+
+\subsubsection{Zmiana parametru krzyżowania}
+Zwiększenie parametru krzyżowania powoduje zwiększenie  ilości osobników z gorszymi wynikami. Jest to powód dla którego zwiększyła się wartości wariancji dla wartości średniej.
+
+\subsubsection{Zmiana wartości liczby pokoleń}
+Zwiększenie parametru liczby pokoleń wpywają na jakość znajdowanych rozwiązań ponieważ algorytm ma więcej możliwści na znalezienie bardziej optymalnego rozwiązania.
+
+
+\subsubsection{Jednoczesna zmiana wartości krzyżowania i mutacji}
+Temperaturowy wykres funkcji krzyżowania i mutacji ma charakter multimodalny. Zerowa wartość parametru mutacji powoduje generowanie wyników nieoptymalnych, nie zależnie od parametru prawdopodobieństwa krzyżowania. Z pomocą wygenerowanych wykresów można znaleźć miejsca w których parametry krzyżowania i mutacji są optymalne dla danej instancji.
+
+\subsubsection{Jednoczesna zmiana rozmiaru populacji i liczby pokoleń}
+Wyniki pokazują że w każdym przypadku liczba iteracji miała większy wpływ na poprawę wyników niż liczba osobników populacji. 
+
        \clearpage
-    \section{hybrydowy algorytm genetyczny}
-    	
-    \subsection{Zmiana parametru metody}
+    \section{Hybrydowy algorytm genetyczny}
     
-
-
-\begin{figure}[!htb]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{inc/results/zad3/HGA-bays29-tsp-method-BFGS-poptim-0-05-pressel-0-5}
-  \caption{Metoda BFGS}\label{fig:BFGS}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{inc/results/zad3/HGA-bays29-tsp-method-CG-poptim-0-05-pressel-0-5}
-  \caption{Metoda CG}\label{fig:CG}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-05-pressel-0-5}
-  \caption{Metoda L}\label{fig:L}
-\endminipage
-\end{figure}
-
-
-    \clearpage
-	\subsection{Zmiana parametru prawdopodobieństwa}
-
-
-\begin{figure}[!h]
-    \centering
-    \mbox{
-    \subfigure{
-     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5}}}\quad
-    }
-    \subfigure{
-   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5}}}\quad
-  }
-    }
-        \mbox{
-    \subfigure{
-     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5}}}\quad
-    }
-    \subfigure{
-   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5}}}\quad
-  }
-    }
-    \caption{Porównanie wyników podczas zmiany parametru prawdopodobieństwa }
-    \end{figure}
-    
-    \clearpage
- 	 \subsection{Zmiana parametru nacisku}
+ 	 \subsection{Zmiana parametru \textit{pressel}}
  	 
 
 \begin{figure}[!h]
@@ -622,12 +621,42 @@ Dla jednoczesnej zmiany rozmiaru populacji i liczby iteracji najlepszy wynik uzy
     \caption{Porównanie wyników podczas zmiany  parametru nacisku}
     \end{figure}
     
-    
+    Mniejsze wartości parametru \textit{pressel} mają tendencję do przypisywania równych prawdopodobieństw wszystkim rozwiązaniom, a większe wartości mają tendencję do przypisywania większych wartości tym rozwiązaniom o lepszej wartości dopasowania. Gdy parametr \textit{pressel} ma wartość 0, to wszystkim minimom lokalnym przyporządkowano to samo prawdopodobieństwo. Większe prawdopodobieństwa są przypisywane do większych wartości \textit{fitness}, gdy wzrasta wartość parametru \textit{pressel}. 
+
+
+    \clearpage
+	\subsection{Zmiana parametru \textit{poptim}}
+
+
+\begin{figure}[!h]
+    \centering
+    \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-25-pressel-0-5}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-45-pressel-0-5}}}\quad
+  }
+    }
+        \mbox{
+    \subfigure{
+     \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-65-pressel-0-5}}}\quad
+    }
+    \subfigure{
+   \includegraphics[width=3in]{{{inc/results/zad3/HGA-bays29-tsp-method-L-BFGS-B-poptim-0-85-pressel-0-5}}}\quad
+  }
+    }
+    \caption{Porównanie wyników podczas zmiany parametru prawdopodobieństwa }
+    \end{figure}
+
+W implementacji dostępnej w pakiecie GA, wyszukiwanie lokalne jest stosowane stochastycznie podczas iteracji GA z prawdopodobieństwem \textit{poptim}  od 0 do 1. Tendencje wykresów zmiany wykresów parametru \textit{pressel} są analogiczne do zmian parametru \textit{poptim}. Większe wartości parametru \textit{poptim} algorytm szybciej znajduje rozwiązania optymalne.
+        
     
     \clearpage
 \section{Wnioski}
 
 Implementacja własnych funkcji mutowania i krzyżowania jest  zadaniem nietrywialnym, ale możliwym do wykonania.  Jakość wyników uzyskanych przy własnych implementacjach znacząco odbiega od domyślnych funkcji.
+
 
 
 \section{Literatura}
@@ -644,5 +673,18 @@ hybrid optimisation, parallelisation and islands evolution", \url{https://arxiv.
 \end{enumerate}
 
 
+\newpage
+\section{Kod źródłowy}
+\lstset{
+language=R,
+extendedchars=true,
+inputencoding=latin1,
+basicstyle=\small
+}
+
+\lstinputlisting{inc/main.r}
+\lstinputlisting{inc/tsp.r}
+\lstinputlisting{inc/tsp_temp_co_mut.r}
+\lstinputlisting{inc/tsp_temp_size_iter.r}
 
 \end{document}\documentclass{article}

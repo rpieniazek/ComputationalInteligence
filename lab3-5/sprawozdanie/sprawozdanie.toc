@@ -1,73 +1,85 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{3}
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Zastosowany algorytm optymalizacji}{3}
+\contentsline {section}{\numberline {2}Zastosowany algorytm optymalizacji}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Zastosowane narz\IeC {\k e}dzia implementacji}{3}
+\contentsline {subsection}{\numberline {2.1}Zastosowane narz\IeC {\k e}dzia implementacji}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}J\IeC {\k e}zyk R}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}J\IeC {\k e}zyk R}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Pakiet GA}{3}
+\contentsline {subsubsection}{\numberline {2.1.2}Pakiet GA}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.3}Pakiet globalOpts}{3}
+\contentsline {subsubsection}{\numberline {2.1.3}Pakiet globalOpts}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}W\IeC {\l }asne operatory krzy\IeC {\.z}owania i mutacji}{4}
+\contentsline {section}{\numberline {3}W\IeC {\l }asne operatory krzy\IeC {\.z}owania i mutacji}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Funkcja wielomodalna - Funkcja Shuberta}{4}
+\contentsline {subsection}{\numberline {3.1}Funkcja wielomodalna - Funkcja Shuberta}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Wz\IeC {\'o}r analityczny}{4}
+\contentsline {subsubsection}{\numberline {3.1.1}Wz\IeC {\'o}r analityczny}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Wykres w ustalonym przedziale zmiennych}{4}
+\contentsline {subsubsection}{\numberline {3.1.2}Wykres w ustalonym przedziale zmiennych}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}Ekstremum globalne}{4}
+\contentsline {subsubsection}{\numberline {3.1.3}Ekstremum globalne}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Zmiana funkcji mutowania}{6}
+\contentsline {subsection}{\numberline {3.2}Zmiana funkcji mutowania}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Zmiana funkcji krzy\IeC {\.z}owania}{7}
+\contentsline {subsection}{\numberline {3.3}Zmiana funkcji krzy\IeC {\.z}owania}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Problem komiwoja\IeC {\.z}era}{9}
+\contentsline {section}{\numberline {4}Problem komiwoja\IeC {\.z}era}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Opis problemu}{9}
+\contentsline {subsection}{\numberline {4.1}Opis problemu}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Instancja 1 - \textit {bays29}}{10}
+\contentsline {subsection}{\numberline {4.2}Instancja 1 - \textit {bays29}}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Zmiana parametru krzy\IeC {\.z}owania}{10}
+\contentsline {subsubsection}{\numberline {4.2.1}Zmiana parametru krzy\IeC {\.z}owania}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Zmiana parametru liczby pokole\IeC {\'n}}{11}
+\contentsline {subsubsection}{\numberline {4.2.2}Zmiana parametru liczby pokole\IeC {\'n}}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Zmiana parametru rozmiaru populacji}{12}
+\contentsline {subsubsection}{\numberline {4.2.3}Zmiana parametru rozmiaru populacji}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{13}
+\contentsline {subsubsection}{\numberline {4.2.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Instancja 2 - \textit {gr17}}{14}
+\contentsline {subsection}{\numberline {4.3}Instancja 2 - \textit {gr17}}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}Zmiana parametru krzy\IeC {\.z}owania}{14}
+\contentsline {subsubsection}{\numberline {4.3.1}Zmiana parametru krzy\IeC {\.z}owania}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2}Zmiana parametru liczby pokole\IeC {\'n}}{15}
+\contentsline {subsubsection}{\numberline {4.3.2}Zmiana parametru liczby pokole\IeC {\'n}}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.3}Zmiana parametru rozmiaru populacji}{16}
+\contentsline {subsubsection}{\numberline {4.3.3}Zmiana parametru rozmiaru populacji}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{17}
+\contentsline {subsubsection}{\numberline {4.3.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Instancja 3 - \textit {gr120}}{18}
+\contentsline {subsection}{\numberline {4.4}Instancja 3 - \textit {gr120}}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Zmiana parametru krzy\IeC {\.z}owania}{18}
+\contentsline {subsubsection}{\numberline {4.4.1}Zmiana parametru krzy\IeC {\.z}owania}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Zmiana parametru liczby pokole\IeC {\'n}}{19}
+\contentsline {subsubsection}{\numberline {4.4.2}Zmiana parametru liczby pokole\IeC {\'n}}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Zmiana parametru rozmiaru populacji}{20}
+\contentsline {subsubsection}{\numberline {4.4.3}Zmiana parametru rozmiaru populacji}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{21}
+\contentsline {subsubsection}{\numberline {4.4.4}Jednoczesna zmiana krzy\IeC {\.z}owania i mutacji oraz rozmiaru populacji i liczby pokole\IeC {\'n}}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}hybrydowy algorytm genetyczny}{22}
+\contentsline {subsection}{\numberline {4.5}Wnioski}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Zmiana parametru metody}{22}
+\contentsline {subsubsection}{\numberline {4.5.1}Zmiana parametru populacji}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Zmiana parametru prawdopodobie\IeC {\'n}stwa}{23}
+\contentsline {subsubsection}{\numberline {4.5.2}Zmiana parametru krzy\IeC {\.z}owania}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Zmiana parametru nacisku}{24}
+\contentsline {subsubsection}{\numberline {4.5.3}Zmiana warto\IeC {\'s}ci liczby pokole\IeC {\'n}}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Wnioski}{25}
+\contentsline {subsubsection}{\numberline {4.5.4}Jednoczesna zmiana warto\IeC {\'s}ci krzy\IeC {\.z}owania i mutacji}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Literatura}{25}
+\contentsline {subsubsection}{\numberline {4.5.5}Jednoczesna zmiana rozmiaru populacji i liczby pokole\IeC {\'n}}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Hybrydowy algorytm genetyczny}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Zmiana parametru \textit {pressel}}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Zmiana parametru \textit {poptim}}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Wnioski}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Literatura}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Kod \IeC {\'z}r\IeC {\'o}d\IeC {\l }owy}{30}

@@ -8,17 +8,10 @@ library(globalOptTests)
 path = '/Users/evelan/Desktop/ga.nosync/'
 
 #uzyte funkcji
-fnNames = c("Schubert", "Bohachevsky1", "Branin")
+fnNames = c("Schubert")
 
 # liczba przebiegow
-testInstances = 50
-
-#testowane wartosci parametrow
-populationSizes = seq(50, 250, by = 50)
-iterSizes = seq(50, 250, by = 50)
-crossoverSizes = seq(0, 1.0, by = 0.25)
-mutationSizes = seq(0, 1.0, by = 0.25)
-elitePopulationSizes = seq(0, 1.0, by = 0.25)
+testInstances = 20
 
 #domyslne parametry
 defaultPopSize = 50
@@ -27,20 +20,11 @@ defaultMutation = 0.1
 defaultElitePopulation = 0.05
 defaultIterationSize = 100
 
-##rysowanie wykresu 3d dla uzytej funkcji
-showFunction3dPlot <- function(x1, x2, f) {
-  persp3D(x1,
-          x2,
-          f,
-          theta = -50,
-          phi = 20,
-          color.palette = bl2gr.colors)
-}
-
-#rysowanie wykresu temperaturowego dla danej funkcji
-showFunctionContour <- function(x1, x2, f) {
-  filled.contour(x1, x2, f, color.palette = bl2gr.colors)
-}
+populationSizes = seq(50, 250, by = 50)
+iterSizes = seq(50, 250, by = 50)
+crossoverSizes = seq(0, 1.0, by = 0.25)
+mutationSizes = seq(0, 1.0, by = 0.25)
+elitePopulationSizes = seq(0, 1.0, by = 0.25)
 
 #rysowanie wykresu temperaturowego ze znalezionym rozwiazaniem
 showFunctionContourWithResult <- function(x1, x2, f, GA) {
@@ -94,19 +78,37 @@ calculateGA <-
       goTest(par = c(x1, x2) , fnName = functionName)
     }
     
+    customMutation <- function(object, parent)
+    {
+      mod <- parent %% 2
+      if(mod == 0){
+        return (parent * 2)
+      } else {
+        return (parent / 2) + 1
+      }
+    }
+    
+    customCrossover <- function(object, parents)
+    {
+      parent_1 <- parents[[1]]
+      parent_2 <- parents[[2]] 
+      wektor_1 <- c(parent_1, parent_2)
+      fitness = testFunctionWrapper(parent_1, parent_2)
+      
+      tmp_parent_1 <- parents[[1]] + runif(1, -1, 1)
+      tmp_parent_2 <- parents[[2]] + runif(1, 1, -1)
+      tmp_wektor_1 <- c(parent_1, parent_2)
+      tmp_fitness = testFunctionWrapper(parent_1, parent_2)
+      
+      if(tmp_fitness > fitness){
+        return (list(children=matrix(tmp_wektor_1), fitness=tmp_fitness))
+      }
+      return (list(children=matrix(wektor_1), fitness=fitness))
+    }
+    
     #rozpatrywana przestrzen
     x1 <- x2 <- seq(-5.12, 5.12, by = 0.1)
     f <- outer(x1, x2, Vectorize(testFunctionWrapper))
-    
-    #zapis wykresu 3d dla wybranej funkcji
-    jpeg(file = sprintf("%s%s-3dplot.jpg", path, functionName))
-    showFunction3dPlot(x1, x2, f)
-    dev.off()
-    
-    #zapis wykresu temperaturowego dla wybranej funkcji
-    jpeg(file = sprintf("%s%s-contour.jpg", path, functionName))
-    showFunctionContour(x1, x2, f)
-    dev.off()
     
     #obliczenie liczby populacji elitarnej
     elitsim = round(popSize * elitsimPercentage)
@@ -123,14 +125,11 @@ calculateGA <-
           - Vectorize(testFunctionWrapper(x[1], x[2])),
         # uwaga na minusa, bo szukamy glob. minimum
         min = c(-5.12, -5.12),
+        #mutation = customMutation,
+        crossover = customCrossover,
         #rozpatrywana przestrzen
         max = c(5.12, 5.12),
-        #rozpatrywana przestrzen
-        popSize = popSize,
         maxiter = iterationSize,
-        elitism = elitsim,
-        pcrossover = pcrossover,
-        pmutation = pmutation,
         run = iterationSize,
         monitor = FALSE #wylaczenie logowania
       )
@@ -234,78 +233,15 @@ calculateGA <-
 #uruchomienie testow dla roznych parametrow dla danej funkcji z argumentu
 invokeTestsWithFunction <- function(functionName) {
   #zmiana wartosci populacji elitarnej
-  for (elitsimPercentage in elitePopulationSizes) {
-    calculateGA(
-      functionName,
-      defaultPopSize,
-      defaultIterationSize,
-      elitsimPercentage,
-      defaultCrossover,
-      defaultMutation
-    )
-  }
-  
-  #zmiana wartosci mutacji
-  for (pmutation in mutationSizes) {
+
     calculateGA(
       functionName,
       defaultPopSize,
       defaultIterationSize,
       defaultElitePopulation,
       defaultCrossover,
-      pmutation
-    )
-  }
-  
-  #zmiana wartosci krzyzowania
-  for (pcrossover in crossoverSizes) {
-    calculateGA(
-      functionName,
-      defaultPopSize,
-      defaultIterationSize,
-      defaultElitePopulation,
-      pcrossover,
       defaultMutation
     )
-  }
-  
-  #jednoczesna zmiana krzyzowania  i mutacji
-  for (pcrossover in crossoverSizes) {
-    for (pmutation in mutationSizes) {
-      calculateGA(
-        functionName,
-        defaultPopSize,
-        defaultIterationSize,
-        defaultElitePopulation,
-        pcrossover,
-        pmutation
-      )
-    }
-  }
-  
-  #zmiana wartosci liczby iteracji
-  for (iterationSize in iterSizes) {
-    calculateGA(
-      functionName,
-      defaultPopSize,
-      iterationSize,
-      defaultElitePopulation,
-      defaultCrossover,
-      defaultMutation
-    )
-  }
-  
-  #zmiana liczby popopulacji
-  for (popSize in populationSizes) {
-    calculateGA(
-      functionName,
-      popSize,
-      defaultIterationSize,
-      defaultElitePopulation,
-      defaultCrossover,
-      defaultMutation
-    )
-  }
 }
 
 #START
